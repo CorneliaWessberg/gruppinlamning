@@ -1,0 +1,26 @@
+#navbar {
+    display:flex;
+    justify-content: space-around; 
+    
+}
+
+.box {
+    display:flex;
+    flex-direction: column;
+    height:20vw;
+    width:19vw;
+    border: 2px solid blue;
+    
+}
+
+
+
+.item {
+    margin-left:2vw;
+}
+
+#products {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
