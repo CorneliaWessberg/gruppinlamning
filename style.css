@@ -1,3 +1,13 @@
+#navbar {
+    display:flex;
+    justify-content: space-around; 
+    
+}
+
+.item {
+    margin-left:2vw;
+}
+
 #products {
     height: 300px;
     border: 2px solid red;

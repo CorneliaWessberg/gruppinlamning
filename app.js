@@ -4,17 +4,28 @@ const addProduct = function(e) {
  
     e.preventDefault;
 
-const product = []
+const productList = []
 const name = document.querySelector("#inputText").value;
 const description = document.querySelector("#inputDescription").value;
 const price = document.querySelector("#inputNumber").value;
 
-const addProductBox = document.createElement("p");
-addProductBox.createAttribute("ptagg",)
-addProductBox.innerText = name + "  " + description + "  " + price + "$";
-const push = document.querySelector("#products").appendChild(addProductBox)
 
-product.push(push);
+
+if (productList.length === 0 ) {
+    
+    const addProductBox = document.createElement("p");
+    addProductBox.innerText = name + "  " + description + "  " + price + "$";
+    const push = document.querySelector("#products").appendChild(addProductBox)
+    productList.push(push)
+}
+else {
+    // const createBox = document.createElement("div")
+    // const section = document.querySelector("section").appendChild(createBox)
+    console.log("else")
+}
+
+
+
 }
 
 const btn = document.querySelector("#addBtn");
