@@ -4,11 +4,23 @@
     
 }
 
+.box {
+    display:flex;
+    flex-direction: column;
+    height:20vw;
+    width:19vw;
+    border: 2px solid blue;
+    
+}
+
+
+
 .item {
     margin-left:2vw;
 }
 
 #products {
-    height: 300px;
-    border: 2px solid red;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
 }
