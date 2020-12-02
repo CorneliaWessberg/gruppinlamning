@@ -1,0 +1,23 @@
+{
+  "name": "gruppinlamning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node-sass sass/main.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/david2203/gruppinlamning.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/david2203/gruppinlamning/issues"
+  },
+  "homepage": "https://github.com/david2203/gruppinlamning#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
