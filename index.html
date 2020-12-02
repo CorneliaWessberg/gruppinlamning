@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
-    <title>Document</title>
+    <title>Our flee market</title>
 
 
 </head>
@@ -40,7 +40,12 @@
     <main>
         <!-- Här ska produkterna komma in -->
         <form>
-            <input type="image" id="inputImage" placeholder="">
+            <input type="text" id="inputImage" placeholder="Picture url"> 
+
+            <button id= "buttonSök">Search</button>
+
+
+
             <input type="text" id="inputText" placeholder="Name">
             <input type="text" id="inputDescription" placeholder="Description">
             <input type="number" id="inputNumber" placeholder="Price">
@@ -50,17 +55,27 @@
             Add product
         </button>
 
-        <section id="products" >
-            
+        <section>
+            <ul id="products">
+
+            </ul>
             
         </section>
+
+
+        <div>
+            <button id="goToCart">
+                Cart 	
+                &#128722;
+            </button>
+        </div>
 
     </main>
 
     <footer>
 
         <div>
-            Kontakt: 
+            Contact: 
             <ul>
                 <li>
                     E-mail:

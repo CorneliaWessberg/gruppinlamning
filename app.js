@@ -11,14 +11,13 @@ const price = document.querySelector("#inputNumber").value;
 
     const addProductBox = document.createElement("div");
     addProductBox.className = "box";
-    const push = document.querySelector("#products").appendChild(addProductBox)
+    document.querySelector("#products").appendChild(addProductBox)
 
+    
     
 
 
-    addProductBox.innerText = name + " " + description + " " + price
-
-
+    addProductBox.innerHTML = "<li>" + name +  "</li>" + " <li> " + description + "</li>" + "<li>" + "Price:"  + price + "kr" + "</li>" + "<button id= \"btnAddToCart\" > Add to cart </button>" 
 
 
 }
@@ -65,3 +64,15 @@ var checkInputValuePrice = function () {
 
 const btn = document.querySelector("#addBtn");
 btn.addEventListener("click", checkInputValueName);
+
+
+
+
+//----------------------------------------------------
+
+const goToShoppingcart = function () {
+    window.document.location="./shoppingcart.html";
+}
+
+const btnCart = document.querySelector("#goToCart");
+btnCart.addEventListener("click", goToShoppingcart)
