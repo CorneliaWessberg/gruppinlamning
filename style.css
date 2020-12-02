@@ -1,41 +1,3 @@
-#navbar {
-    display:flex;
-    justify-content: space-around; 
-    
-}
-
-
- 
-.item {
-    margin-left:2vw;
-}
-
-#products {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
-}
-
-.footer {
-    background-color: gray;
-    position:fixed;
-    bottom:0;
-    width: 100%;
-}
-
-.footer-lista{
-
-}
-
-.copy {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 15px;
-}
-
-.frakt {
-    text-align: center;
-}
 body {
   margin: 0;
   font-size: 1.5vw; }
@@ -82,6 +44,10 @@ body {
   border: 2px solid blue;
   list-style: none; }
 
+.item {
+  margin-left: 2vw; }
 
-
-
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
