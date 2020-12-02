@@ -1,8 +1,10 @@
+
 var lista = []
 const addProduct = function() {
  
- 
- 
+    
+
+
 const name = document.querySelector("#inputText").value;
 const description = document.querySelector("#inputDescription").value;
 const price = document.querySelector("#inputNumber").value;
