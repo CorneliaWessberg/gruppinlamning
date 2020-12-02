@@ -7,7 +7,9 @@ body {
 
 #headersec {
   height: 30vw;
-  background-image: url("bilder/headerback.jpg"); }
+  background-image: url("bilder/headerback.jpg");
+  background-position: center;
+  background-size: cover; }
 
 #navbar {
   background-color: #a8969f;
