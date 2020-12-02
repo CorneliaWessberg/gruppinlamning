@@ -9,17 +9,33 @@ const name = document.querySelector("#inputText").value;
 const description = document.querySelector("#inputDescription").value;
 const price = document.querySelector("#inputNumber").value;
 
+    // creating a div with classname box as a child to the ul with id products in HTML
     const addProductBox = document.createElement("div");
     addProductBox.className = "box";
     document.querySelector("#products").appendChild(addProductBox)
     
-   
-    lista.push(price)
+    // // creating a list item with classname li-image as a child to the div with classname box
+    // const createLi = document.createElement("li");
+    // createLi.className="li-Image"
+    // document.querySelector(".box").appendChild(createLi)
+
+    //creating an img tag as a child to the list item with class name li-Image
+
+    addProductBox.innerHTML = "<li id=\"li-Image" + lista.length +  "\" </li>"  +  ` <li> ${name} </li> <li> ${description} </li> <li> Price: ${price} kr </li>` + "</li>" + "<button id= \" btnAddToCart" + lista.length + "\"  > Add to cart </button>"
+
+    const imgUrl = document.querySelector("#inputImage").value;
+    const createImg = document.createElement("img");
+    createImg.src = imgUrl
+    document.querySelector("#li-Image").appendChild(createImg)
+
+    createImg.className = "imgStyle";
     
-console.log(lista)
+    
 
-
-    addProductBox.innerHTML = `<li> ${name} </li> <li> ${description} </li> <li> Price: ${price} kr </li>` + "</li>" + "<button id= \"btnAddToCart" + lista.length + "\"" +" > Add to cart </button>"
+    
+// list to give different id names to the buttons
+lista.push(price)
+   
 }
 
 
