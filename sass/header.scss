@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-size: 1.5vw;
+}
+
+#header {
+    height:33vw;
+    
+    
+}
+
+#headersec {
+    height:30vw;
+    background-image: url("bilder/headerback.jpg");
+    
+}
+
+#navbar {
+    background-color: rgb(168, 150, 159);
+    display:flex;   
+    list-style: none;
+    
+}
+
+#about {
+    margin-left:70vw;
+}
+
+#h1 {
+    height:29vw;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    color:white;
+    
+}

@@ -1,8 +1,5 @@
-#navbar {
-    display:flex;
-    justify-content: space-around; 
-    
-}
+@import "./header.scss";
+
 
 .box {
     display:flex;
@@ -15,8 +12,6 @@
     list-style: none;
     
 }
-
-
 
 .item {
     margin-left:2vw;
