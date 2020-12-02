@@ -12,20 +12,22 @@
 </head>
 
 <body>
+    <header id="header">
+        <section id="headersec">
 
+        <div id="h1">
+            <h1 id="h1--text"> 
+                Welcome to our online flea market!
+            </h1>
+        </div>
+    
 
-    <header>
-
-        <h1> 
-            Welcome to our online flee market!
-        </h1>
-
-        <nav >
+        <nav id="nav">
             <ul id="navbar">
                 <li class = "item">
                    <a href=""> Home </a> 
                 </li>
-                <li class = "item">
+                <li class = "item" id="about">
                     <a href=""> About </a> 
                 </li>
                 <li class = "item">
@@ -36,13 +38,18 @@
                 </li>
             </ul>
         </nav>
-
+        </section>
     </header>
-       
+
     <main>
         <!-- Här ska produkterna komma in -->
         <form>
-            <input type="image" id="inputImage" placeholder="">
+            <input type="text" id="inputImage" placeholder="Picture url"> 
+
+            <button id= "buttonSök">Search</button>
+
+
+
             <input type="text" id="inputText" placeholder="Name">
             <input type="text" id="inputDescription" placeholder="Description">
             <input type="number" id="inputNumber" placeholder="Price">
@@ -52,17 +59,27 @@
             Add product
         </button>
 
-        <section id="products" >
-            
+        <section>
+            <ul id="products">
+
+            </ul>
             
         </section>
+
+
+        <div>
+            <button id="goToCart">
+                Cart 	
+                &#128722;
+            </button>
+        </div>
 
     </main>
 
     <footer>
 
         <div>
-            Kontakt: 
+            Contact: 
             <ul>
                 <li>
                     E-mail:

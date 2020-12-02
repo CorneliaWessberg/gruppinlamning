@@ -24,3 +24,24 @@
     flex-wrap:wrap;
     justify-content: center;
 }
+
+.footer {
+    background-color: gray;
+    position:fixed;
+    bottom:0;
+    width: 100%;
+}
+
+/*.footer-lista{
+
+}*/
+
+.copy {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+.frakt {
+    text-align: center;
+}
