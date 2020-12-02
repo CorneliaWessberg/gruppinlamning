@@ -1,21 +1,11 @@
-<<<<<<< HEAD
 #navbar {
     display:flex;
     justify-content: space-around; 
     
 }
 
-.box {
-    display:flex;
-    flex-direction: column;
-    height:20vw;
-    width:19vw;
-    border: 2px solid blue;
-    
-}
 
-
-
+ 
 .item {
     margin-left:2vw;
 }
@@ -46,7 +36,6 @@
 .frakt {
     text-align: center;
 }
-=======
 body {
   margin: 0;
   font-size: 1.5vw; }
@@ -93,11 +82,6 @@ body {
   border: 2px solid blue;
   list-style: none; }
 
-.item {
-  margin-left: 2vw; }
 
-#products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
->>>>>>> f07f530dac094a33adf189475f99a88dd1d267fd
+
+
