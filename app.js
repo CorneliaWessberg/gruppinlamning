@@ -1,5 +1,5 @@
 
-
+var lista = []
 const addProduct = function() {
  
     
@@ -12,14 +12,14 @@ const price = document.querySelector("#inputNumber").value;
     const addProductBox = document.createElement("div");
     addProductBox.className = "box";
     document.querySelector("#products").appendChild(addProductBox)
-
     
+   
+    lista.push(price)
     
+console.log(lista)
 
 
-    addProductBox.innerHTML = "<li>" + name +  "</li>" + " <li> " + description + "</li>" + "<li>" + "Price:"  + price + "kr" + "</li>" + "<button id= \"btnAddToCart\" > Add to cart </button>" 
-
-
+    addProductBox.innerHTML = `<li> ${name} </li> <li> ${description} </li> <li> Price: ${price} kr </li>` + "</li>" + "<button id= \"btnAddToCart" + lista.length + "\"" +" > Add to cart </button>"
 }
 
 
@@ -76,3 +76,11 @@ const goToShoppingcart = function () {
 
 const btnCart = document.querySelector("#goToCart");
 btnCart.addEventListener("click", goToShoppingcart)
+
+
+const addToShoppingcart = function () {
+    console.log("hej")
+}
+
+const btnAddToCart = document.querySelector( "#btnAddToCart" + lista.length);
+btnAddToCart.addEventListener("click", addToShoppingcart)
