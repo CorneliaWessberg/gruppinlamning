@@ -1,7 +1,7 @@
 
 var lista = []
 var lista2 = []
-const addProduct = function() {
+const addProduct = function(a) {
  
     
 
@@ -16,7 +16,7 @@ const addProduct = function() {
     document.querySelector("#products").appendChild(addProductBox)
     
     
-    addProductBox.innerHTML = "<li id=\"limg" + lista.length +  "\" > </li>"  +  ` <li> ${name} </li> <li> ${description} </li> <li> Price: ${price} kr </li>` + "</li>" + "<li id=\"btnAddToCart" + lista.length +  "\"> Add to cart </button>"
+    addProductBox.innerHTML = "<li id=\"limg" + lista.length +  "\" > </li>"  +  ` <li> ${name} </li> <li> ${description} </li> <li> Price: ${price} kr </li>` + "</li>" + "<li id=\"btnList" + lista.length +  "\"></li>"
 
     
 
@@ -41,20 +41,27 @@ const addProduct = function() {
 
  // Creating a button in HTML and connecting to a variable
     const createBtn = document.createElement("button");
+    createBtn.innerText ="Add to cart"
 
  //  creating a var with a varying id-Names for the created buttons /pushing to lista2 
-    const btnId = "#btnAddToCart" + lista.length;
-    lista2.push(btnId);
+    const btnListId = "#btnList" + lista2.length;
+    
+    const btnId = "btnId" + lista2.length;
+    createBtn.id = btnId
+    const usableBtnId = "#" + btnId;
+    lista2.push(btnListId);
+    
 
  // a loop to determine what ist to be added to the id base "#btnAddToCart"
     for (var j = 0; j < lista2.length; j++) {
     }
  
  // creating a var that can be used as an id selector
-    const varBtnId = lista2[lista2.length -1]
-    console.log(lista2)
-    // document.querySelector(varBtnId).appendChild(createBtn);
+    const varBtnId = lista2[lista2.length - 1]
+ 
+    document.querySelector(varBtnId).appendChild(createBtn);
    
+    
 }
 
 
@@ -115,9 +122,11 @@ btnCart.addEventListener("click", goToShoppingcart)
 
 
 
-// const addToShoppingcart = function () {
-//     console.log("hej")
-// }
+const addToShoppingcart = function () {
+    console.log("hej")
+}
 
-// const btnAddToCart = document.querySelector("#btnAddToCart");
-// btnAddToCart.addEventListener("click", addToShoppingcart);
+
+// const btnAddToCart = document.querySelector(a   );
+// console.log(usableBtnId)
+// btnAddToCart.addEventListener("click", addToShoppingcart());

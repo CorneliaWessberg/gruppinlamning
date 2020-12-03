@@ -42,13 +42,15 @@ body {
   height: 11vw; }
 
 .box {
+  margin: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   height: 20vw;
   width: 19vw;
-  border: 2px solid #647218;
+  border: 5px solid #690909;
+  background-color: #a15a5d;
   list-style: none; }
 
 #products {
