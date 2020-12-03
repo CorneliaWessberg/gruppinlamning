@@ -1,20 +1,22 @@
-body {
-  margin: 0;
-  font-size: 1.5vw; }
+.imgStyle {
+  height: 11vw; }
 
-#header {
-  height: 33vw; }
-
-#headersec {
-  height: 30vw;
-  background-image: url("bilder/headerback.jpg");
-  background-position: center;
-  background-size: cover; }
-
-#navbar {
-  background-color: #a8969f;
+.box {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 20vw;
+  width: 19vw;
+  border: 2px solid #647218;
   list-style: none; }
+
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+em {
+  margin-left: 2vw; }
 
 #about {
   margin-left: 65vw; }
@@ -32,7 +34,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #6996aa; }
+  color: #0799dd; }
 
 .imgStyle {
   height: 11vw; }
@@ -44,11 +46,8 @@ body {
   justify-content: flex-end;
   height: 20vw;
   width: 19vw;
-  border: 2px solid blue;
+  border: 2px solid #647218;
   list-style: none; }
-
-.item {
-  margin-left: 2vw; }
 
 #products {
   display: flex;
