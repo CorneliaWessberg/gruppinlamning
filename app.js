@@ -6,34 +6,22 @@ const addProduct = function() {
     
 
 
-const name = document.querySelector("#inputText").value;
-const description = document.querySelector("#inputDescription").value;
-const price = document.querySelector("#inputNumber").value;
+    const name = document.querySelector("#inputText").value;
+    const description = document.querySelector("#inputDescription").value;
+    const price = document.querySelector("#inputNumber").value;
 
     // creating a div with classname box as a child to the ul with id products in HTML
     const addProductBox = document.createElement("div");
     addProductBox.className = "box";
     document.querySelector("#products").appendChild(addProductBox)
     
-    // // creating a list item with classname li-image as a child to the div with classname box
-    // const createLi = document.createElement("li");
-    // createLi.className="li-Image"
-    // document.querySelector(".box").appendChild(createLi)
-
-    //creating an img tag as a child to the list item with class name li-Image
-
     
+    addProductBox.innerHTML = "<li id=\"limg" + lista.length +  "\" > </li>"  +  ` <li> ${name} </li> <li> ${description} </li> <li> Price: ${price} kr </li>` + "</li>" + "<li id=\"btnAddToCart" + lista.length +  "\"> Add to cart </button>"
 
     
 
 
-
-    addProductBox.innerHTML = "<li id=\"limg" + lista.length +  "\" > </li>"  +  ` <li> ${name} </li> <li> ${description} </li> <li> Price: ${price} kr </li>` + "</li>" + "<button id= \" btnAddToCart" + lista.length + "\"  > Add to cart </button>"
-
-    
-
-
-const imgUrl = document.querySelector("#inputImage").value;
+    const imgUrl = document.querySelector("#inputImage").value;
     const createImg = document.createElement("img");
     createImg.src = imgUrl
     createImg.className = "imgStyle";
@@ -41,40 +29,31 @@ const imgUrl = document.querySelector("#inputImage").value;
     
 
     
-    const listaId = "\"#limg" + lista.length + "\"";
+    const listaId = "#limg" + lista.length;
     lista.push(listaId);
 
-    for (var i = 0; i < lista.length; i++) {
-
-        console.log(lista[i])
-        
+    for (var i = 0; i < lista.length; i++) {   
     }
-
-  
-    const varId = lista[lista.length - 1]
-    console.log(varId)
-    const didiget = document.querySelector(varId);
-    didiget.textContent = "hej"
-
+    const varImgId = lista[lista.length - 1]
+    document.querySelector(varImgId).appendChild(createImg);
     
 
-    
 
-    console.log(didiget)
+ // Creating a button in HTML and connecting to a variable
+    const createBtn = document.createElement("button");
 
-    console.log(lista)
+ //  creating a var with a varying id-Names for the created buttons /pushing to lista2 
+    const btnId = "#btnAddToCart" + lista.length;
+    lista2.push(btnId);
 
-    console.log (createImg)
-    
-    
-    // const btnId = "btnAddToCart" + lista2[j];
-    // lista2.push(btnId);
-
-    // for (var j = 0; j < lista2.length; j++) {
-
-    //     document.getElementById(lista2[j])
-
-    // }
+ // a loop to determine what ist to be added to the id base "#btnAddToCart"
+    for (var j = 0; j < lista2.length; j++) {
+    }
+ 
+ // creating a var that can be used as an id selector
+    const varBtnId = lista2[lista2.length -1]
+    console.log(lista2)
+    // document.querySelector(varBtnId).appendChild(createBtn);
    
 }
 
@@ -134,11 +113,11 @@ const btnCart = document.querySelector("#goToCart");
 btnCart.addEventListener("click", goToShoppingcart)
 
 
+
+
 // const addToShoppingcart = function () {
 //     console.log("hej")
 // }
 
-
-
-// const btnAddToCart = document.querySelector( "#btnAddToCart");
-// btnAddToCart.addEventListener("click", addToShoppingcart)
+// const btnAddToCart = document.querySelector("#btnAddToCart");
+// btnAddToCart.addEventListener("click", addToShoppingcart);

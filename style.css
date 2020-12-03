@@ -1,21 +1,23 @@
-.imgStyle {
-  height: 11vw; }
+body {
+  margin: 0;
+  font-size: 1.5vw;
+  background-color: #dff8fc; }
 
-.box {
+#header {
+  height: 33vw; }
+
+#headersec {
+  height: 30vw;
+  background-image: url("bilder/headerback.jpg");
+  background-position: center;
+  background-size: cover; }
+
+#navbar {
+  background-color: #a8969f;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  height: 20vw;
-  width: 19vw;
-  border: 2px solid #647218;
   list-style: none; }
 
-#products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-em {
+.item {
   margin-left: 2vw; }
 
 #about {
