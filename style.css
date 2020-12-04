@@ -15,7 +15,8 @@ body {
 #navbar {
   background-color: #a8969f;
   display: flex;
-  list-style: none; }
+  list-style: none;
+  margin-top: 0; }
 
 .item {
   margin-left: 2vw; }
