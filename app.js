@@ -1,7 +1,8 @@
 // created 2 lists for later use 
 var lista = []
 var lista2 = []
-
+var lista3 = []
+var boxLista = []
 //function for adding products from the homepage
 
 const addProduct = function() {
@@ -16,6 +17,11 @@ const addProduct = function() {
     // creating a div with classname=box as a child to the ul with id=products in HTML
     const addProductBox = document.createElement("div");
     addProductBox.className = "box";
+
+    const boxId = "boxId" + boxLista.length;
+    boxLista.push(boxId)
+    addProductBox.id = boxLista [boxLista.length -1]
+
     document.querySelector("#products").appendChild(addProductBox)
     addProductBox.innerHTML = "<li id=\"limg" + lista.length +  "\" > </li>"  +  ` <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li>` + "</li>" + "<li id=\"btnList" + lista.length +  "\"></li>"
 
@@ -64,12 +70,23 @@ const addProduct = function() {
 
 // another function that is going to add a selected product to the shoppingcart
         const addToShoppingcart = function () {
-            console.log("hej")
+
+            // show how many items are inside
+            const itemsInside= document.querySelector("#itemsInside")
+            const sum = lista3.length + 1
+            itemsInside.innerHTML = "Items: (" + sum +")"
+            lista3.push(itemsInside);
+            console.log(lista3)
+
+            
          }
     
     // added eventlistener to the created buttons of each product
     const btnAddToCart = document.querySelector(usableBtnId);
     btnAddToCart.addEventListener("click", addToShoppingcart);
+
+    localStorage.setItem("one", addProductBox.innerHTML)
+    console.log(localStorage)
 }
 
 
