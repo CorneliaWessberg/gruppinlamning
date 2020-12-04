@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 var lista = []
->>>>>>> f07f530dac094a33adf189475f99a88dd1d267fd
 const addProduct = function() {
  
     
