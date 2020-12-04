@@ -34,18 +34,83 @@ body {
   align-items: center;
   color: #6996aa; }
 
+.imgStyle {
+  height: 12vw;
+  margin-bottom: 15px;
+  width: auto; }
+
 .box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  height: 20vw;
-  width: 19vw;
-  border: 2px solid blue;
-  list-style: none; }
+  justify-content: center;
+  height: 30vw;
+  width: 20vw;
+  border: 3px solid #a8969f;
+  border-radius: 20px;
+  list-style: none;
+  line-height: 35px;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 1rem;
+  color: #1b2066;
+  padding: 10px; }
+
+#inputImage {
+  margin-right: 5px;
+  padding: 5px;
+  border: 1px solid #a8969f; }
+
+#inputText {
+  margin-right: 5px;
+  padding: 5px;
+  border: 1px solid #a8969f; }
+
+#inputDescription {
+  margin-right: 5px;
+  padding: 5px;
+  border: 1px solid #a8969f; }
+
+#inputNumber {
+  padding: 5px;
+  margin-right: 5px;
+  border: 1px solid #a8969f; }
+
+.namn {
+  text-decoration: underline #1b2066;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+  padding: 6px;
+  color: #6996aa;
+  border-radius: 5px; }
+
+.beskrivning {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 3px; }
+
+.pris {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 3px; }
+
+form {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-top: 40px;
+  align-items: center;
+  margin-bottom: 10px; }
+
+#addBtn {
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid #a8969f; }
 
 .item {
-  margin-left: 2vw; }
+  margin-left: 2vw;
+  padding: 10px; }
 
 #products {
   display: flex;
