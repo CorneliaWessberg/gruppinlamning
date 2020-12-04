@@ -1,37 +1,37 @@
-
+// created 2 lists for later use 
 var lista = []
 var lista2 = []
-const addProduct = function(a) {
+
+//function for adding products from the homepage
+
+const addProduct = function() {
  
     
 
-
+    //declaring variables to inputfields in html
     const name = document.querySelector("#inputText").value;
     const description = document.querySelector("#inputDescription").value;
     const price = document.querySelector("#inputNumber").value;
 
-    // creating a div with classname box as a child to the ul with id products in HTML
+    // creating a div with classname=box as a child to the ul with id=products in HTML
     const addProductBox = document.createElement("div");
     addProductBox.className = "box";
     document.querySelector("#products").appendChild(addProductBox)
-    
-    
-    addProductBox.innerHTML = "<li id=\"limg" + lista.length +  "\" > </li>"  +  ` <li> ${name} </li> <li> ${description} </li> <li> Price: ${price} kr </li>` + "</li>" + "<li id=\"btnList" + lista.length +  "\"></li>"
+    addProductBox.innerHTML = "<li id=\"limg" + lista.length +  "\" > </li>"  +  ` <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li>` + "</li>" + "<li id=\"btnList" + lista.length +  "\"></li>"
 
-    
-
-
+    //creating an img tag in HTML
     const imgUrl = document.querySelector("#inputImage").value;
     const createImg = document.createElement("img");
     createImg.src = imgUrl
+
+    //giving the img tag a classname for later styling in css
     createImg.className = "imgStyle";
 
     
 
-    
+    //pushing a varying id to lista for later use
     const listaId = "#limg" + lista.length;
     lista.push(listaId);
-
     for (var i = 0; i < lista.length; i++) {   
     }
     const varImgId = lista[lista.length - 1]
@@ -43,7 +43,7 @@ const addProduct = function(a) {
     const createBtn = document.createElement("button");
     createBtn.innerText ="Add to cart"
 
- //  creating a var with a varying id-Names for the created buttons /pushing to lista2 
+ //  creating a var with a varying id-Names for the created buttons /pushing to lista2 for later use
     const btnListId = "#btnList" + lista2.length;
     
     const btnId = "btnId" + lista2.length;
@@ -58,16 +58,24 @@ const addProduct = function(a) {
  
  // creating a var that can be used as an id selector
     const varBtnId = lista2[lista2.length - 1]
- 
     document.querySelector(varBtnId).appendChild(createBtn);
    
+
+
+// another function that is going to add a selected product to the shoppingcart
+        const addToShoppingcart = function () {
+            console.log("hej")
+         }
     
+    // added eventlistener to the created buttons of each product
+    const btnAddToCart = document.querySelector(usableBtnId);
+    btnAddToCart.addEventListener("click", addToShoppingcart);
 }
 
 
-
-var checkInputValueName = function () {
-    
+// function to check that the input field for "name of the product" isnt empty 
+var checkInputValueName = function (e) {
+    e.preventDefault();
     const name = document.querySelector("#inputText").value;
 
     if (name === "") {
@@ -78,6 +86,8 @@ var checkInputValueName = function () {
         
     }
 }
+
+// function to check that the input field for "desctription of the product" isnt empty  
 var checkInputValueDescription = function () {
     
     const description = document.querySelector("#inputDescription").value;
@@ -90,6 +100,8 @@ var checkInputValueDescription = function () {
         
     }
 }
+
+//function to check that the input field for "price of the product" isnt empty 
 var checkInputValuePrice = function () {
  
     
@@ -104,14 +116,12 @@ var checkInputValuePrice = function () {
     }
 }
 
+// adding eventlistener to the addProduct button/ but first check the conditions of the other functions
 const btn = document.querySelector("#addBtn");
 btn.addEventListener("click", checkInputValueName);
 
 
-
-
-//----------------------------------------------------
-
+// a button that takes the customer to the shoppingcart (another HTML)
 const goToShoppingcart = function () {
     window.document.location="./shoppingcart.html";
 }
@@ -122,11 +132,4 @@ btnCart.addEventListener("click", goToShoppingcart)
 
 
 
-const addToShoppingcart = function () {
-    console.log("hej")
-}
 
-
-// const btnAddToCart = document.querySelector(a   );
-// console.log(usableBtnId)
-// btnAddToCart.addEventListener("click", addToShoppingcart());
