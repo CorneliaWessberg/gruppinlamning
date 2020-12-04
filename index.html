@@ -43,25 +43,21 @@
     <main>
         <!-- Här ska produkterna komma in -->
         <form>
-            <input type="text" id="inputImage" placeholder="Picture url"> 
-
             
-
-
-
-            <input type="text" id="inputText" placeholder="Name">
-            <input type="text" id="inputDescription" placeholder="Description">
-            <input type="number" id="inputNumber" placeholder="Price">
-           
+            <p> Paste a url to add a picture to your product: <input type="text" id="inputImage" placeholder="Picture url"> </p>
+            <p> Add a name to your product: <input type="text" id="inputText" placeholder="Name"> </p>
+            <p> Add a description to your product: <input type="text" id="inputDescription" placeholder="Description"> </p>
+            <p> Add a price to your product: <input type="number" id="inputNumber" placeholder="Price"> </p>
+            <button id="addBtn">
+                Add product
+            </button>
         </form>
-        <button id="addBtn">
-            Add product
-        </button>
+        
         
 
-        <section>
+        <section id="productSection">
             <ul id="products">
-
+                
             </ul>
             
         </section>

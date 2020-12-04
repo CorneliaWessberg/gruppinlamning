@@ -1,18 +1,5 @@
 @import "./header.scss";
-@import "./footer.scss";
 @import "./shoppinglist.scss";
 @import "./products.scss";
-
-
-.item {
-    margin-left:2vw;
-    padding: 10px;
-}
-
-#products {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
-}
-
+@import "./footer.scss";
 

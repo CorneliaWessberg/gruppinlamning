@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-size: 1.5vw;
+    background-color:rgb(223, 248, 252);
 }
 
 #header {
@@ -23,9 +24,12 @@ body {
     list-style: none;
     
 }
+.item {
+    margin-left:2vw;
+}
 
 #about {
-    margin-left:70vw;
+    margin-left:65vw;
 }
 
 #h1--text {
@@ -41,7 +45,7 @@ body {
     display:flex;
     justify-content: center;
     align-items:center;
-    color:rgb(105, 150, 170);
+    color:rgb(7, 153, 221);
     
     
 }
