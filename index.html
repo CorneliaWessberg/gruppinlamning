@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
     <title>Our flee market</title>
@@ -11,67 +12,7 @@
 </head>
 
 <body>
-
-    <header>
-
-        <h1> 
-            Welcome to our online flee market!
-        </h1>
-
-        <nav >
-            <ul id="navbar">
-                <li class = "item">
-                   <a href=""> Home </a> 
-                </li>
-                <li class = "item">
-                    <a href=""> About </a> 
-                </li>
-                <li class = "item">
-                   <a href=""> Our products </a> 
-                </li>
-                <li class = "item">
-                    <a href=""> Contact </a> 
-                </li>
-            </ul>
-        </nav>
-
-    </header>
-       
-    <main>
-        <!-- Här ska produkterna komma in -->
-        <form>
-            <input type="image" id="inputImage" alt="image" >
-            <input type="text" id="inputText" placeholder="Name">
-            <input type="text" id="inputDescription" placeholder="Description">
-            <input type="number" id="inputNumber" placeholder="Price">
-        </form>
-        
-        <button id="addBtn">
-            Add product
-        </button>
-
-        <section id="products" >
-            
-            
-        </section>
-
-    </main>
-
-    <footer class="footer">
-        <div>
-            <ul class="footer-lista">
-                <li> Kontakt: </li>
-                <li> E-mail: </li>
-                <li> Phone: </li>          
-            </ul>
-        </div>
-
-        <div>
-            <p class="frakt">Fri frakt över 490kr</p>
-        </div>
-
-        <div class="copy">
-           2020 &copy;
+ 
     <header id="header">
         <section id="headersec">
 
@@ -80,7 +21,7 @@
                 Welcome to our online flea market!
             </h1>
         </div>
-    </footer>
+    
 
         <nav id="nav">
             <ul id="navbar">
@@ -104,24 +45,21 @@
     <main>
         <!-- Här ska produkterna komma in -->
         <form>
-            <input type="text" id="inputImage" placeholder="Picture url"> 
-
-            <button id= "buttonSök">Search</button>
-
-
-
-            <input type="text" id="inputText" placeholder="Name">
-            <input type="text" id="inputDescription" placeholder="Description">
-            <input type="number" id="inputNumber" placeholder="Price">
+            
+            <p> Paste a url to add a picture to your product: <input type="text" id="inputImage" placeholder="Picture url"> </p>
+            <p> Add a name to your product: <input type="text" id="inputText" placeholder="Name"> </p>
+            <p> Add a description to your product: <input type="text" id="inputDescription" placeholder="Description"> </p>
+            <p> Add a price to your product: <input type="number" id="inputNumber" placeholder="Price"> </p>
+            <button id="addBtn">
+                Add product
+            </button>
         </form>
         
-        <button id="addBtn">
-            Add product
-        </button>
+        
 
-        <section>
+        <section id="productSection">
             <ul id="products">
-
+                
             </ul>
             
         </section>
@@ -136,29 +74,23 @@
 
     </main>
 
-    <footer>
-
+    <footer class="footer">
         <div>
-            Contact: 
-            <ul>
-                <li>
-                    E-mail:
-                </li>
-                <li>
-                    Phone:
-                </li>
+            <ul class="footer-lista">
+                <li>  <i class="far fa-address-book"></i>  Kontakt: </li>
+                <li> <i class="fas fa-envelope-square"></i>  E-mail: </li>
+                <li> <i class="fas fa-phone-square-alt"></i> Phone: </li>          
             </ul>
-           
         </div>
 
         <div>
-           2020 &copy;
+            <p class="frakt">Fri frakt</p>
         </div>
 
+        <div class="copy">
+        2020 &copy;
+        </div>
     </footer>
-
-
-
         
 </body>
 </html>
