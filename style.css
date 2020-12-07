@@ -16,9 +16,7 @@ body {
   background-color: #a8969f;
   display: flex;
   list-style: none;
-  margin-top: 0px;
-  text-decoration: none;
-  font-size: 1.7vw; }
+  margin-top: 0; }
 
 #navbar a:hover {
   color: red;
@@ -176,3 +174,22 @@ form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
+
+.footer {
+  background-color: gray;
+  position: relative;
+  bottom: 0;
+  width: 100%; }
+
+.footer-lista {
+  font-size: 1.5vh; }
+
+.copy {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+  font-size: 1vh; }
+
+.frakt {
+  text-align: center;
+  font-size: 1vh; }
