@@ -4,7 +4,7 @@ var lista2 = []
 var lista3 = []
 var produktLista = []
 //function for adding products from the homepage
-var counter = 0
+ 
 const addProduct = function() {
  
     

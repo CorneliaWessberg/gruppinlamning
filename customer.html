@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleLogin.css">
+    <link rel="stylesheet" href="styleCostumer.css">
+    <script src="app.js" defer></script>
     <title>Home</title>
 </head>
 
@@ -39,22 +40,41 @@
         </header>
     
         <main>
-            <div class="container">
-                <label for="uname"><b>Username:</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
-            
-                <label for="psw"><b>Password:</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-            
-                <label>
-                  <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-                <button type="submit">Login</button>
+            <section id="productSection">
+                <ul id="products">
+                    
+                </ul>
                 
-              </div>
+            </section>
+    
+    
+            <div>
+                <button id="goToCart">
+                    <div id="itemsInside"></div>
+                    Cart 	
+                    &#128722;
+                </button>
+    
+            </div>
         </main>
         
-      
+        <footer class="footer">
+            <div>
+                <ul class="footer-lista">
+                    <li>  <i class="far fa-address-book"></i>  Kontakt: </li>
+                    <li> <i class="fas fa-envelope-square"></i>  E-mail: </li>
+                    <li> <i class="fas fa-phone-square-alt"></i> Phone: </li>          
+                </ul>
+            </div>
+    
+            <div>
+                <p class="frakt">Fri frakt</p>
+            </div>
+    
+            <div class="copy">
+            2020 &copy;
+            </div>
+        </footer>
       
         
       
