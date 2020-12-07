@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    font-size: 1.5vw;
+    background-color:rgb(223, 248, 252);
+    width:100%;
+}
+
+#header {
+    height:33vw;
+    
+    
+}
+
+#headersec {
+    height:30vw;
+    background-image: url("bilder/headerback.jpg");
+    background-position: center;
+    background-size:cover;
+    
+}
+
+#navbar {
+    background-color: rgb(168, 150, 159);
+    display:flex;   
+    list-style: none;
+    margin-top:0;
+    
+}
+.item {
+    margin-left:2vw;
+}
+
+#about {
+    margin-left:65vw;
+}
+
+#h1--text {
+    display:flex;
+    justify-content: center;
+    width: 50vw;
+    border: 4px solid rgb(27, 32, 102);
+    background-color:rgb(79, 79, 156);
+}
+#h1 {
+    font-size:2vw;
+    height:29vw;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    color:rgb(7, 153, 221);
+    
+    
+}
+
+.container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+ 
+.imgStyle {
+    height:23vw;
+    margin-bottom: 1vw; 
+    padding:2px;
+    border: 2px solid  rgb(168, 150, 159);
+    background-color:white;
+}
+
+.box {
+    display:flex;
+    width:20vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid  rgb(58, 1, 1);
+    background-color:rgb(155, 2, 2);
+    border-radius: 20px;
+    list-style: none;
+    line-height: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 1rem; 
+    color:  rgb(79, 198, 245);
+    padding: 10px; 
+
+}
+
+#inputImage {
+    width:20vw;
+    font-size: 1.5vw;
+    padding: 5px;
+    border: 1px solid  rgb(168, 150, 159);
+    
+}
+
+#inputText {
+    padding: 5px;
+    border: 1px solid  rgb(168, 150, 159);
+    width:20vw;
+    font-size: 1.5vw;
+}
+
+#inputDescription {
+    padding: 5px;
+    border: 1px solid  rgb(168, 150, 159);
+    width: 20vw;
+    font-size: 1.5vw;
+}
+
+#inputNumber {
+    padding: 5px;
+    border: 1px solid  rgb(168, 150, 159);
+    width:20vw;
+    font-size: 1.5vw;
+}
+
+.name {
+    text-decoration: underline rgb(27, 32, 102);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: 3px solid rgb(27, 32, 102);
+    padding: 6px;
+    background-color: rgb(79, 79, 156);
+    color:rgb(89, 204, 253);
+    border-radius: 5px;
+    
+}
+
+.description {
+    font-size: 18px; 
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.price   {
+    font-size: 18px; 
+    font-weight: 600;
+    margin-bottom: 3px; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+   
+}
+
+#addBtn {
+    padding: 5px; 
+    border: 1px solid  rgb(168, 150, 159);
+     
+}
+
+
+
+
+
+
+#products {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.footer {
+    background-color: gray;
+    position: relative;   
+    width: 100%;
+    bottom: 0;
+    
+}
+ 
+.footer-lista{
+    font-size: 1.5vh;
+}
+ 
+.copy {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+    font-size: 1vh;
+}
+ 
+.frakt {
+    text-align: center;
+    font-size: 1vh;
+}
