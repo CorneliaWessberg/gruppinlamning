@@ -1,7 +1,8 @@
 body {
   margin: 0;
   font-size: 1.5vw;
-  background-color: #dff8fc; }
+  background-color: #dff8fc;
+  width: 100%; }
 
 #header {
   height: 33vw; }
@@ -178,8 +179,8 @@ form {
 .footer {
   background-color: gray;
   position: relative;
-  bottom: 0;
-  width: 100%; }
+  width: 100%;
+  bottom: 0; }
 
 .footer-lista {
   font-size: 1.5vh; }

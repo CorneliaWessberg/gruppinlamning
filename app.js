@@ -1,21 +1,25 @@
 // created 2 lists for later use 
 var lista = []
 var lista2 = []
-
+var lista3 = []
+var produktLista = []
 //function for adding products from the homepage
 
 const addProduct = function() {
  
     
-
+    
     //declaring variables to inputfields in html
     const name = document.querySelector("#inputText").value;
     const description = document.querySelector("#inputDescription").value;
     const price = document.querySelector("#inputNumber").value;
 
+    
+
     // creating a div with classname=box as a child to the ul with id=products in HTML
     const addProductBox = document.createElement("div");
     addProductBox.className = "box";
+
     document.querySelector("#products").appendChild(addProductBox)
     addProductBox.innerHTML = "<li id=\"limg" + lista.length +  "\" > </li>"  +  ` <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li>` + "</li>" + "<li id=\"btnList" + lista.length +  "\"></li>"
 
@@ -62,15 +66,74 @@ const addProduct = function() {
    
 
 
-// another function that is going to add a selected product to the shoppingcart
+    // another function that is going to add a selected product to the shoppingcart
         const addToShoppingcart = function () {
-            console.log("hej")
+
+            // show how many items are inside
+            const itemsInside= document.querySelector("#itemsInside")
+            const sum = lista3.length + 1
+            itemsInside.innerHTML = "Items: (" + sum +")"
+            lista3.push(itemsInside);
+            console.log(lista3)
+
+            
          }
     
     // added eventlistener to the created buttons of each product
     const btnAddToCart = document.querySelector(usableBtnId);
     btnAddToCart.addEventListener("click", addToShoppingcart);
+
+    let product = {};
+    product.img = imgUrl
+    product.name = name
+    product.description = description
+    product.price = price
+
+    console.log(product)
+    produktLista.push(product)
+
+         let existing = JSON.parse(localStorage.getItem("products"))
+         let newData = existing ? existing.concat(produktLista) : produktLista
+        localStorage.setItem("products", JSON.stringify(newData));
+
+    
 }
+
+    
+    let products = JSON.parse(localStorage.getItem("products"))
+    
+
+ 
+ 
+products.map((product) => {
+    const imgUrl = product.img;
+    const createImg = document.createElement("img");
+    createImg.src = imgUrl
+    createImg.className = "imgStyle";
+    const listaId = "#limg" + lista.length;
+    lista.push(listaId);
+    for (var i = 0; i < lista.length; i++) {   
+    }
+    const varImgId = lista[lista.length - 1]
+    document.querySelector(varImgId).appendChild(createImg);
+    
+    const name = product.name;
+    const description = product.description;
+    const price = product.price;
+
+    const addProductBox = document.createElement("div");
+    addProductBox.className = "box";
+
+    document.querySelector("#products").appendChild(addProductBox)
+    addProductBox.innerHTML = "<li id=\"limg" + lista.length +  "\" > </li>"  +  ` <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li>` + "</li>" + "<li id=\"btnList" + lista.length +  "\"></li>"
+
+    
+
+    
+} )
+
+
+
 
 
 // function to check that the input field for "name of the product" isnt empty 
