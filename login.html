@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleHome.css">
+    <title>Home</title>
+</head>
+
+<body>
+    
+        <header id="header">
+            <section id="headersec">
+    
+            <div id="h1">
+                <h1 id="h1--text"> 
+                    Welcome to our online flea market!
+                </h1>
+            </div>
+        
+    
+            <nav id="nav">
+                <ul id="navbar">
+                    <li class = "item">
+                       <a href="login.html"> login </a> 
+                    </li>
+                    <li class = "item" id="about">
+                        <a href="about.html "> about </a> 
+                    </li>
+                    <li class = "item">
+                       <a href="index.html"> Our products </a> 
+                    </li>
+                    <li class = "item">
+                        <a href=""> Contact </a> 
+                    </li>
+                </ul>
+            </nav>
+            </section>
+        </header>
+    
+    <form action="action_page.php" method="post">
+        
+      
+        <div class="container">
+          <label for="uname"><b>Username:</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+      
+          <label for="psw"><b>Password:</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+          <button type="submit">Login</button>
+          
+        </div>
+      
+        
+      </form>
+</body>
+</html>
