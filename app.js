@@ -4,7 +4,7 @@ var lista2 = []
 var lista3 = []
 var produktLista = []
 //function for adding products from the homepage
- 
+var counter = 0;
 const addProduct = function() {
  
     
@@ -19,7 +19,7 @@ const addProduct = function() {
     
     const btnId = "btnId" + window.localStorage.length;
     const usableBtnId = "#" + btnId;
-    console.log(usableBtnId)
+    
     lista2.push(usableBtnId)
 
     // // // another function that is going to add a selected product to the shoppingcart
@@ -39,7 +39,9 @@ const addProduct = function() {
     // const btnAddToCart = document.querySelector(usableBtnId);
     // btnAddToCart.addEventListener("click", addToShoppingcart);
 
-    const add = counter ++
+    const add = counter 
+
+
     let product = {};
     product.id = add
     product.img = imgUrl
@@ -49,7 +51,7 @@ const addProduct = function() {
 
     
     produktLista.push(product)
-    console.log(add)
+    
     let existing = JSON.parse(localStorage.getItem("products"))
     let newData = existing ? existing.concat(produktLista) : produktLista
     localStorage.setItem("products", JSON.stringify(newData));
@@ -63,9 +65,8 @@ if (window.localStorage.length === 0) {
 }
 else {
 
-
  products.map((product) => {
-     const id = product.id ;
+     const id = product.id;
      const img = product.img;
      const name = product.name;
      const description = product.description;
@@ -76,15 +77,15 @@ else {
  
      document.querySelector("#products").appendChild(addProductBox)
       addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button id=` + id + `>   Add to cart  </button></li>`
-      console.log(id)
+      
      } )
 
  }
 
 
    // function to check that the input field for "name of the product" isnt empty 
-var checkInputValueName = function () {
-   
+var checkInputValueName = function (e) {
+ e.preventDefault();
     const name = document.querySelector("#inputText").value;
 
     if (name === "") {
