@@ -3,9 +3,10 @@ var lista = []
 var lista2 = []
 var lista3 = []
 var produktLista = []
+
+
 //function for adding products from the homepage
- 
-const addProduct = function() {
+ const addProduct = function() {
  
     
     
