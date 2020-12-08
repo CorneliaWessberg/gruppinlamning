@@ -83,10 +83,7 @@ else {
  }
 
 
-
-
-
-// function to check that the input field for "name of the product" isnt empty 
+   // function to check that the input field for "name of the product" isnt empty 
 var checkInputValueName = function () {
    
     const name = document.querySelector("#inputText").value;
@@ -129,9 +126,17 @@ var checkInputValuePrice = function () {
     }
 }
 
+
+
 // adding eventlistener to the addProduct button/ but first check the conditions of the other functions
 const btn = document.querySelector("#addBtn");
 btn.addEventListener("click", checkInputValueName);
+
+
+
+
+
+
 
 
 // a button that takes the customer to the shoppingcart (another HTML)
@@ -141,6 +146,8 @@ const goToShoppingcart = function () {
 
 const btnCart = document.querySelector("#goToCart");
 btnCart.addEventListener("click", goToShoppingcart)
+
+
 
 
 
