@@ -78,10 +78,6 @@ body {
   justify-content: space-around;
   font-size: 4vw; }
 
-/* Birger shoppingcart Main */
-.mainshoppingcart {
-  background-image: url(bilder/no_france.jpg); }
-
 /* Birger shoppingcart Footer */
 .footershoppingcart {
   background-color: #181818;
@@ -118,6 +114,12 @@ body {
   border: 1px solid #a8969f; }
 
 #inputText {
+  padding: 5px;
+  border: 1px solid #a8969f;
+  width: 20vw;
+  font-size: 1.5vw; }
+
+#inputID {
   padding: 5px;
   border: 1px solid #a8969f;
   width: 20vw;
