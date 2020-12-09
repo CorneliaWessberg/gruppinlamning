@@ -6,88 +6,92 @@ var produktLista = []
 
 
 //function for adding products from the homepage
-var counter = 0;
+
 const addProduct = function() {
  
-    
+    console.log("hej")
     
     //declaring variables to inputfields in html
     const name = document.querySelector("#inputText").value;
     const description = document.querySelector("#inputDescription").value;
     const price = document.querySelector("#inputNumber").value;
     const imgUrl = document.querySelector("#inputImage").value;
+    const ID = document.querySelector("#inputID").value;
     
-    
-    
-    const btnId = "btnId" + window.localStorage.length;
-    const usableBtnId = "#" + btnId;
-    
-    lista2.push(usableBtnId)
-
-    // // // another function that is going to add a selected product to the shoppingcart
-    //     const addToShoppingcart = function () {
-
-    //         // show how many items are inside
-    //         const itemsInside= document.querySelector("#itemsInside")
-    //         const sum = lista3.length + 1
-    //         itemsInside.innerHTML = "Items: (" + sum +")"
-    //         lista3.push(itemsInside);
-    //         console.log(lista3)
-
-            
-    //      }
-    
-    // // added eventlistener to the created buttons of each product
-    // const btnAddToCart = document.querySelector(usableBtnId);
-    // btnAddToCart.addEventListener("click", addToShoppingcart);
-
-    const add = counter 
-
-
+    //creating an object and adding the input values
     let product = {};
-    product.id = add
+    product.id = "id" + ID
     product.img = imgUrl
     product.name = name
     product.description = description
     product.price = price
-
-    
     produktLista.push(product)
+   
     
     let existing = JSON.parse(localStorage.getItem("products"))
     let newData = existing ? existing.concat(produktLista) : produktLista
-    localStorage.setItem("products", JSON.stringify(newData));
-    
- 
+    localStorage.setItem("products", JSON.stringify(newData)); 
 }
 
+    // // another function that is going to add a selected product to the shoppingcart
+    const addToShoppingcart = function () {
 
-let products = JSON.parse(localStorage.getItem("products"))
-if (window.localStorage.length === 0) {   
-}
-else {
+            // show how many items are inside
+            const itemsInside= document.querySelector("#itemsInside")
+            const sum = lista3.length + 1
+            itemsInside.innerHTML = "Items: (" + sum +")"
+            lista3.push("Doesnt matter what stands here because it is pushed to count the list.length");
+            
+        }
 
- products.map((product) => {
-     const id = product.id;
-     const img = product.img;
-     const name = product.name;
-     const description = product.description;
-     const price = product.price;
- 
-     const addProductBox = document.createElement("div");
-     addProductBox.className = "box";
- 
-     document.querySelector("#products").appendChild(addProductBox)
-      addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button id=` + id + `>   Add to cart  </button></li>`
-      
+
+    let products = JSON.parse(localStorage.getItem("products"))
+        if (window.localStorage.length === 0) {   
+        }
+        else {
+        
+         products.map((product) => {
+             const id = product.id;
+             const img = product.img;
+             const name = product.name;
+             const description = product.description;
+             const price = product.price;
+             const addProductBox = document.createElement("div");
+             addProductBox.className = "box";
+         
+             document.querySelector("#products").appendChild(addProductBox)
+              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button id=` + id + `>   Add to cart  </button></li>`
+              
+             } )
+        
+         }
+    const getStorage = JSON.parse(localStorage.getItem("products"));
+        if (window.localStorage.length === 0) {   
+        }
+        else {
+        getStorage.map((product)=> {
+            const id = product.id
+            const usableBtnId = "#" + id
+            
+            const btnAddToCart = document.querySelector(usableBtnId);
+            btnAddToCart.addEventListener("click", addToShoppingcart);
      } )
+    }  
+    
+    
+    
 
- }
+
+
+
+ 
+
+ 
 
 
    // function to check that the input field for "name of the product" isnt empty 
 var checkInputValueName = function (e) {
- e.preventDefault();
+//  e.preventDefault();
     const name = document.querySelector("#inputText").value;
 
     if (name === "") {
