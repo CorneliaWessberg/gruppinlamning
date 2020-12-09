@@ -176,6 +176,10 @@ form {
   flex-wrap: wrap;
   justify-content: center; }
 
+#goToCart {
+  padding: 2vw;
+  height: 1vw; }
+
 .footer {
   background-color: gray;
   position: relative;
