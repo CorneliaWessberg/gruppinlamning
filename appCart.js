@@ -1,38 +1,29 @@
 window.onload = function () {
-    let products = JSON.parse(localStorage.getItem("products"))
-        if (window.localStorage.length === 0) {   
-        }
-        else {
+    let products = JSON.parse(localStorage.getItem("cartProducts"))
         
-         products.map((product) => {
-             const id = product.id;
-             const img = product.img;
-             const name = product.name;
-             const description = product.description;
-             const price = product.price;
+        
+         products.map((addedToCart) => {
+             const img = addedToCart.addedUrl;
+             const name = addedToCart.addedName;
+             const description = addedToCart.addedDescription;
+             const price = addedToCart.addedPrice;
              const addProductBox = document.createElement("div");
              addProductBox.className = "box";
          
              document.querySelector("#products").appendChild(addProductBox)
-              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button id=` + id + `>   Add to cart  </button></li>`
+              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> ${price} </li> `
               
-             } )
-        
-         }
+             } )       
 }
 
+let buyItems = function() {
+    localStorage.removeItem("cartProducts")
+    window.document.location="./faktura.html";
+}
+const buy = document.querySelector("#buy")
+buy.addEventListener("click", buyItems)
 
-const getStorage = JSON.parse(localStorage.getItem("products"));
-        if (window.localStorage.length === 0) {   
-        }
-        else {
-        getStorage.map((product)=> {
-            const id = product.id
-            const usableBtnId = "#" + id
-            console.log(usableBtnId)
-            // const btnAddToCart = document.querySelector(usableBtnId);
-            // btnAddToCart.addEventListener("click", addToShoppingcart);
-        } )
-    }  
+
+
         
   
