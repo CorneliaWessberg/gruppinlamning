@@ -22,7 +22,7 @@ let products = JSON.parse(localStorage.getItem("products"))
         
          }
 
-
+    
 
 
     const getStorage = JSON.parse(localStorage.getItem("products"));
@@ -48,6 +48,7 @@ let products = JSON.parse(localStorage.getItem("products"))
     addedToCart.addedName = btnAddToCart.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
     addedToCart.addedUrl = btnAddToCart.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.src; 
     cartLista.push(addedToCart)
+    
     
     let existing = JSON.parse(localStorage.getItem("cartProducts"))
     let newData = existing ? existing.concat(cartLista) : cartLista
