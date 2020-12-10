@@ -7,7 +7,7 @@ var produktLista = []
 
 //function for adding products from the homepage
 
-const addProduct = function() {
+ function addProduct() {
  
     console.log("hej")
     
@@ -34,22 +34,26 @@ const addProduct = function() {
 }
 
     // // another function that is going to add a selected product to the shoppingcart
-    const addToShoppingcart = function () {
+        function addToShoppingcart() {
 
             // show how many items are inside
-            const itemsInside= document.querySelector("#itemsInside")
+            const itemsInside = document.querySelector("#itemsInside")
             const sum = lista3.length + 1
             itemsInside.innerHTML = "Items: (" + sum +")"
             lista3.push("Doesnt matter what stands here because it is pushed to count the list.length");
             
         }
 
+        //  TODO: vi måste dokumentera vårat JSON format : vad är products? obejct, array?
 
     let products = JSON.parse(localStorage.getItem("products"))
-        if (window.localStorage.length === 0) {   
-        }
-        else {
+        if (window.localStorage.length !== 0) {   
+        //}
+        //else {
         
+        //Loopar igenom innehållet, förkortat skrivet (product) är argumentet.
+       // TODO: göra enklare loop konstruktion? 
+
          products.map((product) => {
              const id = product.id;
              const img = product.img;
@@ -60,11 +64,40 @@ const addProduct = function() {
              addProductBox.className = "box";
          
              document.querySelector("#products").appendChild(addProductBox)
-              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button id=` + id + `>   Add to cart  </button></li>`
+              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button id=` + id + `>   Add to cart  </button></li><li> <button class="editBtn"> Edit </button> </li><li> <button class="deleteBtn"> Delete </button></li>`
               
-             } )
+
+              
+                  const deleteButton = document.getElementsByClassName(".deleteBtn")
+                  deleteButton.addEventListener('click' , () => {
+                      alert('are you sure you want to delete?')
+                  
+                  
+              }
+            
+
+             //function deleteProduct(event){
+
+            //const deleteButton = document.getElementsByClassName(".editBtn");  
+             
+            //deleteButton.addEventListener('click' , )
+
+             
+
+                
+             
         
-         }
+             //function editProducts() {
+                 
+                //const NewName = querySelector(".name").editProducts;
+
+                
+
+
+
+            })
+        
+
     const getStorage = JSON.parse(localStorage.getItem("products"));
         if (window.localStorage.length === 0) {   
         }
@@ -75,7 +108,7 @@ const addProduct = function() {
             
             const btnAddToCart = document.querySelector(usableBtnId);
             btnAddToCart.addEventListener("click", addToShoppingcart);
-     } )
+     })
     }  
     
     
@@ -89,8 +122,8 @@ const addProduct = function() {
  
 
 
-   // function to check that the input field for "name of the product" isnt empty 
-var checkInputValueName = function (e) {
+// function to check that the input field for "name of the product" isnt empty 
+function checkInputValueName(e) {
 //  e.preventDefault();
     const name = document.querySelector("#inputText").value;
 
@@ -104,7 +137,7 @@ var checkInputValueName = function (e) {
 }
 
 // function to check that the input field for "desctription of the product" isnt empty  
-var checkInputValueDescription = function () {
+ function checkInputValueDescription() {
     
     const description = document.querySelector("#inputDescription").value;
 
@@ -118,7 +151,7 @@ var checkInputValueDescription = function () {
 }
 
 //function to check that the input field for "price of the product" isnt empty 
-var checkInputValuePrice = function () {
+function checkInputValuePrice() {
  
     
     const price = Number(document.querySelector("#inputNumber").value);
@@ -158,4 +191,4 @@ btnCart.addEventListener("click", goToShoppingcart)
 
 
 
-
+        }
