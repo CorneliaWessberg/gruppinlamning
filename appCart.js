@@ -11,8 +11,9 @@ window.onload = function () {
              addProductBox.className = "box";
          
              document.querySelector("#products").appendChild(addProductBox)
-              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> ${price} </li> `
+              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> ${price} </li> <li> <button id="btn"> Remove from cart </button> </li> `
               
+            
              } )       
 }
 
@@ -25,5 +26,9 @@ buy.addEventListener("click", buyItems)
 
 
 
-        
-  
+let remove = function () {
+    console.log("hej")
+}      
+const removeBtn = document.getElementById("#btn")
+console.log(removeBtn)
+// removeBtn.addEventListener("click", remove)
