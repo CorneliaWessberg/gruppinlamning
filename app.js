@@ -48,8 +48,8 @@ var produktLista = []
 
     let products = JSON.parse(localStorage.getItem("products"))
         if (window.localStorage.length !== 0) {   
-        //}
-        //else {
+        }
+        else {
         
         //Loopar igenom innehållet, förkortat skrivet (product) är argumentet.
        // TODO: göra enklare loop konstruktion? 
@@ -64,40 +64,72 @@ var produktLista = []
              addProductBox.className = "box";
          
              document.querySelector("#products").appendChild(addProductBox)
-              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button id=` + id + `>   Add to cart  </button></li><li> <button class="editBtn"> Edit </button> </li><li> <button class="deleteBtn"> Delete </button></li>`
-              
+              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li><p class="name"> ${name} </p></li> <li><p class="description"> ${description} </p></li> <li><p class="price"> Price: ${price} kr </p></li> <li> <button id=` + id + `>   Add to cart  </button></li>`
+            
+                const Buttons = document.createElement("div")
+                Buttons.classList.add("buttons")
+                
+                const editButton = document.createElement("button")
+                editButton.classList.add("editBtn")
+                editButton.innerText = "Edit"
 
-              
-                  const deleteButton = document.getElementsByClassName(".deleteBtn")
-                  deleteButton.addEventListener('click' , () => {
-                      alert('are you sure you want to delete?')
-                  
-                  
-              }
+                const deleteButton = document.createElement("button")
+                deleteButton.classList.add("delete-btn");                          
+                deleteButton.innerText = "Delete";  
+
+
+                addProductBox.appendChild(Buttons);
+                Buttons.appendChild(editButton);
+                Buttons.appendChild(deleteButton);
+
+                deleteButton.addEventListener('click', function() {
+                    alert("are you sure you want to delete this item?")
+                    deleteButton.parentNode.parentNode.remove();
+                    
+                });
+                    /*function clearStorage() {
+                    if (window.localStorage.length !== 0) {
+                        //localStorage.removeItem(id);
+                    }}*/
+
+                
+                   const changeName = document.querySelector(".name");
+                    const changeDescription = document.querySelector(".description");
+                    const changePrice = document.querySelector(".price");
+                
+
+                  editButton.addEventListener('click' , function(){
+                      changeName.innerHTML = prompt("Insert new product name!")
+                      changeDescription.innerText = prompt("Insert your new description!")
+                      changePrice.innerHTML = prompt("insert your new price! 💵")
+
+                    
+            
+                    
+                  });
+            });
+
+                let deleteStorage = (productToDelete) => () => {
+                    const newProductList = products.filter(product=> product.id !== productToDelete.id);
+                    }
+                    deleteButton.addEventListener('click', deleteStorage(product));
+                /*let deleteStorage= function() {
+                    localStorage.removeItem("products");
+                    location.reload();
+                }*/
+
             
 
-             //function deleteProduct(event){
-
-            //const deleteButton = document.getElementsByClassName(".editBtn");  
-             
-            //deleteButton.addEventListener('click' , )
-
-             
-
                 
-             
+               
+
         
-             //function editProducts() {
-                 
-                //const NewName = querySelector(".name").editProducts;
-
-                
+                  
+                  
+              
 
 
-
-            })
-        
-
+//}
     const getStorage = JSON.parse(localStorage.getItem("products"));
         if (window.localStorage.length === 0) {   
         }
@@ -191,4 +223,4 @@ btnCart.addEventListener("click", goToShoppingcart)
 
 
 
-        }
+}
