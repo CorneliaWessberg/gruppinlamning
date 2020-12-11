@@ -15,9 +15,16 @@ window.onload = function () {
               
             
 
-              
+
              } )       
 }
+
+const removeItem = document.querySelector(".btn")
+
+removeItem.addEventListener('click' , function() {
+    removeItem.parentNode.parentNode.remove();
+});
+
 
 let buyItems = function() {
     localStorage.removeItem("cartProducts")

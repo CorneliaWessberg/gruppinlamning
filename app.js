@@ -48,8 +48,8 @@ var produktLista = []
 
     let products = JSON.parse(localStorage.getItem("products"))
         if (window.localStorage.length !== 0) {   
-        }
-        else {
+        //}
+       // else {
         
         //Loopar igenom innehållet, förkortat skrivet (product) är argumentet.
        // TODO: göra enklare loop konstruktion? 
@@ -105,9 +105,9 @@ var produktLista = []
 
                     
             
-                    
-                  });
-            });
+                    });
+        
+           
 
                 let deleteStorage = (productToDelete) => () => {
                     const newProductList = products.filter(product=> product.id !== productToDelete.id);
@@ -119,10 +119,10 @@ var produktLista = []
                 }*/
 
             
-
+            //});
                 
                
-
+        
         
                   
                   
@@ -151,7 +151,7 @@ var produktLista = []
 
  
 
- 
+
 
 
 // function to check that the input field for "name of the product" isnt empty 
@@ -221,6 +221,6 @@ btnCart.addEventListener("click", goToShoppingcart)
 
 
 
-
+});
 
 }
