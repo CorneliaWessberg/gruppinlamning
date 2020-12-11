@@ -107,9 +107,9 @@ var produktLista = []
             
                     });
         
-           
-
-                let deleteStorage = (productToDelete) => () => {
+                
+                
+               /* let deleteStorage = (productToDelete) => () => {
                     const newProductList = products.filter(product=> product.id !== productToDelete.id);
                     }
                     deleteButton.addEventListener('click', deleteStorage(product));
@@ -121,7 +121,7 @@ var produktLista = []
             
             //});
                 
-               
+            
         
         
                   
