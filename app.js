@@ -1,13 +1,12 @@
+ 
 // created 2 lists for later use 
 var lista = []
 var lista2 = []
 var lista3 = []
 var produktLista = []
-
-
 //function for adding products from the homepage
 
- function addProduct() {
+const addProduct = function() {
  
     console.log("hej")
     
@@ -26,6 +25,8 @@ var produktLista = []
     product.description = description
     product.price = price
     produktLista.push(product)
+
+    
    
     
     let existing = JSON.parse(localStorage.getItem("products"))
@@ -34,26 +35,22 @@ var produktLista = []
 }
 
     // // another function that is going to add a selected product to the shoppingcart
-        function addToShoppingcart() {
+    const addToShoppingcart = function () {
 
             // show how many items are inside
-            const itemsInside = document.querySelector("#itemsInside")
+            const itemsInside= document.querySelector("#itemsInside")
             const sum = lista3.length + 1
             itemsInside.innerHTML = "Items: (" + sum +")"
             lista3.push("Doesnt matter what stands here because it is pushed to count the list.length");
             
         }
 
-        //  TODO: vi måste dokumentera vårat JSON format : vad är products? obejct, array?
 
     let products = JSON.parse(localStorage.getItem("products"))
-        if (window.localStorage.length !== 0) {   
-        //}
-       // else {
+        if (window.localStorage.length === 0) {   
+        }
+        else {
         
-        //Loopar igenom innehållet, förkortat skrivet (product) är argumentet.
-       // TODO: göra enklare loop konstruktion? 
-
          products.map((product) => {
              const id = product.id;
              const img = product.img;
@@ -64,72 +61,54 @@ var produktLista = []
              addProductBox.className = "box";
          
              document.querySelector("#products").appendChild(addProductBox)
-              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li><p class="name"> ${name} </p></li> <li><p class="description"> ${description} </p></li> <li><p class="price"> Price: ${price} kr </p></li> <li> <button id=` + id + `>   Add to cart  </button></li>`
-            
-                const Buttons = document.createElement("div")
-                Buttons.classList.add("buttons")
-                
-                const editButton = document.createElement("button")
-                editButton.classList.add("editBtn")
-                editButton.innerText = "Edit"
-
-                const deleteButton = document.createElement("button")
-                deleteButton.classList.add("delete-btn");                          
-                deleteButton.innerText = "Delete";  
-
-
-                addProductBox.appendChild(Buttons);
-                Buttons.appendChild(editButton);
-                Buttons.appendChild(deleteButton);
-
-                deleteButton.addEventListener('click', function() {
-                    alert("are you sure you want to delete this item?")
-                    deleteButton.parentNode.parentNode.remove();
-                    
-                });
-                    /*function clearStorage() {
-                    if (window.localStorage.length !== 0) {
-                        //localStorage.removeItem(id);
-                    }}*/
-
-                
-                   const changeName = document.querySelector(".name");
-                    const changeDescription = document.querySelector(".description");
-                    const changePrice = document.querySelector(".price");
-                
-
-                  editButton.addEventListener('click' , function(){
-                      changeName.innerHTML = prompt("Insert new product name!")
-                      changeDescription.innerText = prompt("Insert your new description!")
-                      changePrice.innerHTML = prompt("insert your new price! 💵")
-
-                    
-            
-                    });
-        
-                
-                
-               /* let deleteStorage = (productToDelete) => () => {
-                    const newProductList = products.filter(product=> product.id !== productToDelete.id);
-                    }
-                    deleteButton.addEventListener('click', deleteStorage(product));
-                /*let deleteStorage= function() {
-                    localStorage.removeItem("products");
-                    location.reload();
-                }*/
-
-            
-            //});
-                
-            
-        
-        
-                  
-                  
+              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button id=` + id + `>   Add to cart  </button></li>`
               
 
+              //Skapar nya knappar på produkt-korten
 
-//}
+              const Buttons = document.createElement("div")
+              Buttons.classList.add("buttons")
+              
+              const editButton = document.createElement("button")
+              editButton.classList.add("editBtn")
+              editButton.innerText = "Edit"
+
+              const deleteButton = document.createElement("button")
+              deleteButton.classList.add("delete-btn");                          
+              deleteButton.innerText = "Delete";  
+
+              addProductBox.appendChild(Buttons);
+              Buttons.appendChild(editButton);
+              Buttons.appendChild(deleteButton);
+
+              //Ropar på funktionen som tar bort produkten från sidan när man trycker på delete knappen
+                deleteButton.addEventListener('click', deleteProduct );
+
+
+                //Skapar variablar av värdena i listan: namn, description, price
+                  const changeName = document.querySelector(".name");
+                  const changeDescription = document.querySelector(".description");
+                  const changePrice = document.querySelector(".price");
+              
+                //Funktionen som ropar på editKnappen, admin kan stoppa in nya värden på produkten.
+
+                  editButton.addEventListener('click' , function(){
+                  changeName.innerHTML = prompt("Insert new product name!")
+                    changeDescription.innerText = prompt("Insert your new description!")
+                    changePrice.innerHTML = prompt("insert your new price! 💵")
+                });
+                
+              function deleteProduct(e) {
+                e.preventDefault();
+                var deleteButton = e.target;
+                alert("are you sure you want to delete this item?")
+                deleteButton.parentNode.parentNode.remove();
+            }
+             } )
+
+
+        
+         }
     const getStorage = JSON.parse(localStorage.getItem("products"));
         if (window.localStorage.length === 0) {   
         }
@@ -140,7 +119,7 @@ var produktLista = []
             
             const btnAddToCart = document.querySelector(usableBtnId);
             btnAddToCart.addEventListener("click", addToShoppingcart);
-     })
+     } )
     }  
     
     
@@ -151,11 +130,11 @@ var produktLista = []
 
  
 
+ 
 
 
-
-// function to check that the input field for "name of the product" isnt empty 
-function checkInputValueName(e) {
+   // function to check that the input field for "name of the product" isnt empty 
+var checkInputValueName = function (e) {
 //  e.preventDefault();
     const name = document.querySelector("#inputText").value;
 
@@ -169,7 +148,7 @@ function checkInputValueName(e) {
 }
 
 // function to check that the input field for "desctription of the product" isnt empty  
- function checkInputValueDescription() {
+var checkInputValueDescription = function () {
     
     const description = document.querySelector("#inputDescription").value;
 
@@ -183,7 +162,7 @@ function checkInputValueName(e) {
 }
 
 //function to check that the input field for "price of the product" isnt empty 
-function checkInputValuePrice() {
+var checkInputValuePrice = function () {
  
     
     const price = Number(document.querySelector("#inputNumber").value);
@@ -219,8 +198,3 @@ const btnCart = document.querySelector("#goToCart");
 btnCart.addEventListener("click", goToShoppingcart)
 
 
-
-
-});
-
-}
