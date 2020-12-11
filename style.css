@@ -189,3 +189,15 @@ form {
 .frakt {
   text-align: center;
   font-size: 1vh; }
+
+
+  .pagination {
+    text-align: center;
+    
+}
+
+.pagination a {
+  color: black;
+  padding: 2px;
+  font-size: large;
+}
