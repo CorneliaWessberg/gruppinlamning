@@ -35,12 +35,14 @@ let products = JSON.parse(localStorage.getItem("products"))
 
         // another function that is going to add a selected product to the shoppingcart
   const addToShoppingcart = function () {
-    console.log("hey")
-    // show how many items are inside
+    const items = document.querySelector("#itemsInside")
+    if (items.innerHTML === "") {   
+    }
+    else {
     const itemsInside= document.querySelector("#itemsInside")
-    const sum = lista.length + 1
-    itemsInside.innerHTML = "Items: (" + sum +")"
-    lista.push("Doesnt matter what stands here because it is pushed to count the list.length");
+    const itemNumber = localStorage.getItem("cartProducts")
+    itemsInside.innerHTML = "Items: (" +JSON.parse(itemNumber).length +")"
+    }
 
     let addedToCart = {};
     addedToCart.addedPrice = btnAddToCart.parentNode.previousElementSibling.innerHTML;
