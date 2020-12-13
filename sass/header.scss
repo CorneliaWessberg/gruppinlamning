@@ -26,6 +26,16 @@ body {
     margin-top:0;
     
 }
+
+
+#navbar a:hover {
+    color: red;
+    font-size: 2vw;
+    background-color: white;
+    border: 2px solid grey;
+    text-decoration: none;
+}
+
 .item {
     margin-left:2vw;
 }

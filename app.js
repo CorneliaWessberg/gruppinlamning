@@ -1,3 +1,4 @@
+ 
 // created 2 lists for later use 
 var lista = []
 var lista2 = []
@@ -62,6 +63,9 @@ const addProduct = function() {
              document.querySelector("#products").appendChild(addProductBox)
               addProductBox.innerHTML = `<li> ${id} </li> <li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button id=` + id + `>   Add to cart  </button></li>`
               
+
+              //Skapar nya knappar på produkt-korten
+
               const Buttons = document.createElement("div")
               Buttons.classList.add("buttons")
               
@@ -77,8 +81,8 @@ const addProduct = function() {
               Buttons.appendChild(editButton);
               Buttons.appendChild(deleteButton);
 
-              
-              deleteButton.addEventListener('click', deleteProduct );
+              //Ropar på funktionen som tar bort produkten från sidan när man trycker på delete knappen
+                deleteButton.addEventListener('click', deleteProduct );
 
                 editButton.addEventListener('click' , function(){
                     editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktnamn: ");
@@ -195,8 +199,5 @@ const goToShoppingcart = function () {
 
 const btnCart = document.querySelector("#goToCart");
 btnCart.addEventListener("click", goToShoppingcart)
-
-
-
 
 

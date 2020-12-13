@@ -55,7 +55,7 @@ let products = JSON.parse(localStorage.getItem("products"))
     let existing = JSON.parse(localStorage.getItem("cartProducts"))
     let newData = existing ? existing.concat(cartLista) : cartLista
     localStorage.setItem("cartProducts", JSON.stringify(newData)); 
-    location.reload();
+    //location.reload();
     }
 
         

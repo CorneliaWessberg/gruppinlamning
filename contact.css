@@ -1,48 +1,48 @@
 body {
     background-color: rgb(228, 228, 228);
+    max-width: 100%;
+    margin: auto;
+    justify-content: center;
+    background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 7vw;
 }
 
 .container {
-    max-width: 600px;
+    max-width: 50%;
     margin: auto;
     padding: 10px;
     background-color: white;
+    justify-content: center;
+    margin-top: 80px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.5vw;
+    border: solid white;
+    border-radius: 4px; 
 }
 
 #first_name {
     padding-top: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-.footer {
-    background-color: gray;
-    position: absolute;   
-    width: 100%;
-    bottom: 0;
-    
-}
- 
-.footer-lista{
-    font-size: 1.5vh;
-}
- 
-.copy {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 15px;
-    font-size: 1vh;
-}
- 
-.frakt {
+.row-header {
     text-align: center;
-    font-size: 1vh;
+
 }
+
+.submit {
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
