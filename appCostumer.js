@@ -1,5 +1,7 @@
 var lista = []
 var cartLista = []
+const itemsInside= document.querySelector("#itemsInside")
+
 
 let products = JSON.parse(localStorage.getItem("products"))
         if (window.localStorage.length === 0) {   
@@ -34,15 +36,17 @@ let products = JSON.parse(localStorage.getItem("products"))
         const btnAddToCart = document.querySelector(usableBtnId);
 
         // another function that is going to add a selected product to the shoppingcart
-  const addToShoppingcart = function () {
-    const items = document.querySelector("#itemsInside")
-    if (items.innerHTML === "") {   
+
+    const itemNumber = localStorage.getItem("cartProducts")
+    
+    if (itemNumber === null) {
     }
     else {
-    const itemsInside= document.querySelector("#itemsInside")
-    const itemNumber = localStorage.getItem("cartProducts")
-    itemsInside.innerHTML = "Items: (" +JSON.parse(itemNumber).length +")"
+    itemsInside.textContent = "Items: (" + JSON.parse(itemNumber).length +")"
     }
+
+  const addToShoppingcart = function () {
+    
 
     let addedToCart = {};
     addedToCart.addedPrice = btnAddToCart.parentNode.previousElementSibling.innerHTML;
@@ -55,7 +59,7 @@ let products = JSON.parse(localStorage.getItem("products"))
     let existing = JSON.parse(localStorage.getItem("cartProducts"))
     let newData = existing ? existing.concat(cartLista) : cartLista
     localStorage.setItem("cartProducts", JSON.stringify(newData)); 
-    //location.reload();
+    location.reload();
     }
 
         
