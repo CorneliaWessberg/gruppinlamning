@@ -57,7 +57,7 @@ const addProduct = function() {
            const btnAddToCart = document.querySelector(usableBtnId);
            btnAddToCart.addEventListener("click", addToShoppingcart);
     } )
-   }  
+     
 
     // another function that is going to add a selected product to the shoppingcart (But not really because admin should only have a preview of how it looks)
     const addToShoppingcart = function () {
@@ -68,7 +68,7 @@ const addProduct = function() {
             itemsInside.innerHTML = "Items: (" + sum +")"
             lista3.push("Doesnt matter what stands here because it is pushed to count the list.length");
             
-        }
+        }}
 
 
     // Accessing local storage and mapping through the objects inside in order to show the products in the HTML files

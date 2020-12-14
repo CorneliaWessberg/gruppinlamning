@@ -146,7 +146,8 @@ form {
 #addBtn {
     background-image: linear-gradient(to right top, #ccb4ea, #a3b2de, #8aacc7, #82a2ac, #849595);
     padding: 15px; 
-    border: beige;
+    border: solid 1px white;
+    box-shadow: 3px 3px #E3F0F0;
     width: 25vw;
     border-radius: 20px;
     font-family: 'Times New Roman', Times, serif;
@@ -180,5 +181,5 @@ form {
     font-size: 2vw;
     border: white;
     font-family: 'Times New Roman', Times, serif;
-    box-shadow: 5px 5px #E3F0F0;
+    box-shadow: 3px 3px #E3F0F0;
 }
