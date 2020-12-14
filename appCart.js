@@ -11,7 +11,7 @@ window.onload = function () {
              addProductBox.className = "box";
          
              document.querySelector("#products").appendChild(addProductBox)
-              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> ${price} </li> `
+              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> ${price} </li> <button id="btn"> Remove from cart</button>`
               
               const removeItem = document.querySelector("#btn")
 
