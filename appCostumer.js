@@ -24,7 +24,7 @@ let products = JSON.parse(localStorage.getItem("products"))
              addProductBox.className = "box";
          
              document.querySelector("#products").appendChild(addProductBox)
-              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button id=` + id + `>   Add to cart  </button></li>`
+              addProductBox.innerHTML = `<li class="name" > ${name} </li> <li> <img class="imgStyle" src="${img}"> </li>  <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button class="cartBtn" id=` + id + `>   Add to cart  </button></li>`
               
              } )
          }
