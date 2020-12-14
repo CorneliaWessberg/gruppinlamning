@@ -1,3 +1,4 @@
+ 
 // created 2 lists for later use 
 var lista = []
 var lista2 = []
@@ -24,6 +25,8 @@ const addProduct = function() {
     product.description = description
     product.price = price
     produktLista.push(product)
+
+    
    
     
     let existing = JSON.parse(localStorage.getItem("products"))
@@ -60,7 +63,50 @@ const addProduct = function() {
              document.querySelector("#products").appendChild(addProductBox)
               addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button id=` + id + `>   Add to cart  </button></li>`
               
+
+              //Skapar nya knappar på produkt-korten
+
+              const Buttons = document.createElement("div")
+              Buttons.classList.add("buttons")
+              
+              const editButton = document.createElement("button")
+              editButton.classList.add("editBtn")
+              editButton.innerText = "Edit"
+
+              const deleteButton = document.createElement("button")
+              deleteButton.classList.add("delete-btn");                          
+              deleteButton.innerText = "Delete";  
+
+              addProductBox.appendChild(Buttons);
+              Buttons.appendChild(editButton);
+              Buttons.appendChild(deleteButton);
+
+              //Ropar på funktionen som tar bort produkten från sidan när man trycker på delete knappen
+                deleteButton.addEventListener('click', deleteProduct );
+
+
+                //Skapar variablar av värdena i listan: namn, description, price
+                  const changeName = document.querySelector(".name");
+                  const changeDescription = document.querySelector(".description");
+                  const changePrice = document.querySelector(".price");
+              
+                //Funktionen som ropar på editKnappen, admin kan stoppa in nya värden på produkten.
+
+                  editButton.addEventListener('click' , function(){
+                  changeName.innerHTML = prompt("Insert new product name!")
+                    changeDescription.innerText = prompt("Insert your new description!")
+                    changePrice.innerHTML = prompt("insert your new price! 💵")
+                });
+                
+              function deleteProduct(e) {
+                e.preventDefault();
+                var deleteButton = e.target;
+                alert("are you sure you want to delete this item?")
+                deleteButton.parentNode.parentNode.remove();
+            }
              } )
+
+
         
          }
     const getStorage = JSON.parse(localStorage.getItem("products"));
@@ -150,10 +196,5 @@ const goToShoppingcart = function () {
 
 const btnCart = document.querySelector("#goToCart");
 btnCart.addEventListener("click", goToShoppingcart)
-
-
-
-
-
 
 
