@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-size: 1.5vw;
-    background-color:rgb(223, 248, 252);
+    background-color: #FAFCFC;
     width:100%;
 }
 
@@ -13,31 +13,52 @@ body {
 
 #headersec {
     height:30vw;
-    background-image: url("bilder/headerback.jpg");
+    background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
     background-position: center;
     background-size:cover;
     
 }
 
 #navbar {
-    background-color: rgb(168, 150, 159);
+    background-image: linear-gradient(to right top, #ccb4ea, #a3b2de, #8aacc7, #82a2ac, #849595);
     display:flex;   
     list-style: none;
     margin-top:0;
+    padding-right: 3vw;
+    align-items: space-between;
     
+    
+    
+}
+
+#navbar a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #F0FFFF;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 
 #navbar a:hover {
-    color: red;
-    font-size: 2vw;
-    background-color: white;
-    border: 2px solid grey;
-    text-decoration: none;
-}
+   
+        font-size: 2vw;
+        color: #76E3E3;
+        background-color: #F0FFFF;
+        border: solid 1px blue;
+        border-radius: 5px;
+        padding: 3px;
+        line-height: 3vw;
+    }
+
 
 .item {
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
     margin-left:2vw;
+    text-decoration: none;
+    font-size: 1.5vw;
+    font-weight: 600;
+    color:  #F0FFFF;
 }
 
 #about {
@@ -47,9 +68,8 @@ body {
 #h1--text {
     display:flex;
     justify-content: center;
-    width: 50vw;
-    border: 4px solid rgb(27, 32, 102);
-    background-color:rgb(79, 79, 156);
+    width: 80vw;
+   
 }
 #h1 {
     font-size:2vw;
@@ -57,7 +77,10 @@ body {
     display:flex;
     justify-content: center;
     align-items:center;
-    color:rgb(7, 153, 221);
+    color: #F0FFFF;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4vw;
+    font-weight: 900;
     
     
 }

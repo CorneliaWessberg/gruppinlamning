@@ -1,5 +1,7 @@
 var lista = []
 var cartLista = []
+const itemsInside= document.querySelector("#itemsInside")
+
 
 let products = JSON.parse(localStorage.getItem("products"))
         if (window.localStorage.length === 0) {   
@@ -34,13 +36,17 @@ let products = JSON.parse(localStorage.getItem("products"))
         const btnAddToCart = document.querySelector(usableBtnId);
 
         // another function that is going to add a selected product to the shoppingcart
+
+    const itemNumber = localStorage.getItem("cartProducts")
+    
+    if (itemNumber === null) {
+    }
+    else {
+    itemsInside.textContent = "Items: (" + JSON.parse(itemNumber).length +")"
+    }
+
   const addToShoppingcart = function () {
-    console.log("hey")
-    // show how many items are inside
-    const itemsInside = document.querySelector("#itemsInside")
-    const sum = lista.length + 1
-    itemsInside.innerHTML = "Items: (" + sum +")"
-    lista.push("Doesnt matter what stands here because it is pushed to count the list.length");
+    
 
     let addedToCart = {};
     addedToCart.addedPrice = btnAddToCart.parentNode.previousElementSibling.innerHTML;
@@ -53,7 +59,7 @@ let products = JSON.parse(localStorage.getItem("products"))
     let existing = JSON.parse(localStorage.getItem("cartProducts"))
     let newData = existing ? existing.concat(cartLista) : cartLista
     localStorage.setItem("cartProducts", JSON.stringify(newData)); 
-    //location.reload();
+    location.reload();
     }
 
         
