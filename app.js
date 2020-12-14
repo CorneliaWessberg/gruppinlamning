@@ -97,12 +97,17 @@ const addProduct = function() {
                     changeDescription.innerText = prompt("Insert your new description!")
                     changePrice.innerHTML = prompt("insert your new price! 💵")
                 });
+
+
+
                 
               function deleteProduct(e) {
                 e.preventDefault();
                 var deleteButton = e.target;
                 alert("are you sure you want to delete this item?")
                 deleteButton.parentNode.parentNode.remove();
+
+                //uppdatera e.target.id som matchar item i local storage (googla)
             }
              } )
 
