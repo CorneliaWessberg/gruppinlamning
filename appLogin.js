@@ -1,9 +1,13 @@
 // ------------- Login ------------
+
+//pseudo user name and password
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
 const psw = "admin"
 const uname = "admin"
-console.log(uname)
+
+
+//function to link admin and user to according HTML page, admin to addProduct and user to customer
 function login () {
     
     console.log(username.value)

@@ -1,3 +1,5 @@
+
+// a function that adds the products from the cart localStorage to the cart HTML 
 window.onload = function () {
     let products = JSON.parse(localStorage.getItem("cartProducts"))
         
@@ -13,6 +15,8 @@ window.onload = function () {
              document.querySelector("#products").appendChild(addProductBox)
               addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> ${price} </li> <button id="btn"> Remove from cart</button>`
               
+
+              // adding etra buttons for the customer to be able to remove items from their shoppingcarst
               const removeItem = document.querySelector("#btn")
 
               removeItem.addEventListener('click' , function() {
@@ -25,7 +29,8 @@ window.onload = function () {
 
             
 
-
+// function that purchases the products in the cart for the customer and resetting the local storage for the cart
+// also moves the customer to a page with their invoice (reciept for download)
 let buyItems = function() {
     localStorage.removeItem("cartProducts")
     window.document.location="./faktura.html";
@@ -35,6 +40,7 @@ buy.addEventListener("click", buyItems)
 
 
 
+// not finished function to remove removed items form local storage 
 let remove = function () {
     console.log("hej")
 }      
