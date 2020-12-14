@@ -41,22 +41,7 @@ const addProduct = function() {
 }
 
 
-   // Accessing products in order to acces btn Id
-   const getStorage = JSON.parse(localStorage.getItem("products"));
-
-   // another safeguard for error  "map off null"
-       if (window.localStorage.length === 0) {   
-       }
-       else {
-
-        // btn that calls add to shoppingcart function
-       getStorage.map((product)=> {
-           const id = product.id
-           const usableBtnId = "#" + id
-           
-           const btnAddToCart = document.querySelector(usableBtnId);
-           btnAddToCart.addEventListener("click", addToShoppingcart);
-    } )
+   
      
 
     // another function that is going to add a selected product to the shoppingcart (But not really because admin should only have a preview of how it looks)
@@ -68,7 +53,7 @@ const addProduct = function() {
             itemsInside.innerHTML = "Items: (" + sum +")"
             lista3.push("Doesnt matter what stands here because it is pushed to count the list.length");
             
-        }}
+        }
 
 
     // Accessing local storage and mapping through the objects inside in order to show the products in the HTML files
@@ -141,6 +126,23 @@ const addProduct = function() {
           })
         }
 
+        // Accessing products in order to acces btn Id
+   const getStorage = JSON.parse(localStorage.getItem("products"));
+
+   // another safeguard for error  "map off null"
+       if (window.localStorage.length === 0) {   
+       }
+       else {
+        // btn that calls add to shoppingcart function
+       getStorage.map((product)=> {
+           const id = product.id
+           const usableBtnId = "#" + id
+           
+           const btnAddToCart = document.querySelector(usableBtnId);
+           btnAddToCart.addEventListener("click", addToShoppingcart);
+    } )
+
+}
 
    // function to check that the input field for "name of the product" isnt empty 
 var checkInputValueName = function (e) {
