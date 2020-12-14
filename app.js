@@ -48,15 +48,14 @@ const addProduct = function() {
        if (window.localStorage.length === 0) {   
        }
        else {
-
         // btn that calls add to shoppingcart function
-       getStorage.map((product)=> {
-           const id = product.id
-           const usableBtnId = "#" + id
-           
-           const btnAddToCart = document.querySelector(usableBtnId);
-           btnAddToCart.addEventListener("click", addToShoppingcart);
-    } )
+    //    getStorage.map((product)=> {
+    //        const id = product.id
+    //        const usableBtnId = "#" + id
+    //        console.log(usableBtnId)
+    //        const btnAddToCart = document.querySelector(usableBtnId);
+    //        btnAddToCart.addEventListener("click", addToShoppingcart);
+    //     } )
    }  
 
     // another function that is going to add a selected product to the shoppingcart (But not really because admin should only have a preview of how it looks)
