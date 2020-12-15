@@ -94,37 +94,38 @@ const addProduct = function() {
               Buttons.appendChild(deleteButton);
 
 
-              // delete function which removes the chosen productfrom the shop
-              function deleteProduct(e) {
+              
+                    //Ropar på funktionen som tar bort produkten från sidan när man trycker på delete knappen
+                deleteButton.addEventListener('click', deleteProduct );
+                
+                                    // edit funktion som låter admin ändra värderna "namn", "pris" & "description" på en produkt
+                editButton.addEventListener('click' , editProduct );
+            })
+
+            function editProduct(e) {
+                e.preventDefault();
+                const editButton = e.target;
+                    editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktnamn: ");
+                    editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktbeskrivning: ");
+                    editButton.parentNode.previousElementSibling.previousElementSibling.innerText = prompt("Pris: ");  
+
+
+                    
+            }
+            // delete function which removes the chosen productfrom the shop
+            function deleteProduct(e) {
                 e.preventDefault();
                 const deleteButton = e.target;
-                console.log(deleteButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML)
+                
                 const answer = confirm("are you sure you want to delete this item?") 
                   if(answer)  {
                       deleteButton.parentNode.parentNode.remove();
-                      products.map((product)=> {
-                        const id =product.id;
-                        
-                        const deleteId = deleteButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML
-                        console.log(deleteId)
-                      })
+                    
                   }
              }
               //Ropar på funktionen som tar bort produkten från sidan när man trycker på delete knappen
               const delBtn = document.querySelector(".delete-btn")
                 delBtn.addEventListener('click', deleteProduct );
-
-                
-                                    // edit funktion som låter admin ändra värderna "namn", "pris" & "description" på en produkt
-                    editButton.addEventListener('click' , function(){
-                        product.name = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktnamn: ");
-                        product.description = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktbeskrivning: ");
-                        product.price = editButton.parentNode.previousElementSibling.previousElementSibling.innerText = prompt("Pris: ");          
-                    
-                    
-                        
-                } )
-            })
             
 
           
