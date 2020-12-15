@@ -105,11 +105,17 @@ const addProduct = function() {
             function editProduct(e) {
                 e.preventDefault();
                 const editButton = e.target;
-                    editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktnamn: ");
-                    editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktbeskrivning: ");
-                    editButton.parentNode.previousElementSibling.previousElementSibling.innerText = prompt("Pris: ");  
+                   const editedName = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktnamn: ");
+                   const editedDes = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktbeskrivning: ");
+                   const editedPrice =  editButton.parentNode.previousElementSibling.previousElementSibling.innerText = prompt("Pris: ");  
 
-
+                    let exist = JSON.parse(localStorage.getItem("products"));
+                    console.log(exist)
+                    exist.map((product) => {
+                        targetId = e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+                        localStorage.removeItem(targetId)
+                    })
+                    
                     
             }
             // delete function which removes the chosen productfrom the shop
@@ -120,7 +126,15 @@ const addProduct = function() {
                 const answer = confirm("are you sure you want to delete this item?") 
                   if(answer)  {
                       deleteButton.parentNode.parentNode.remove();
-                    
+                      let exist = JSON.parse(localStorage.getItem("products"));
+                      console.log(exist)
+                      exist.map((product) => {
+                          targetId = e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+                          if(targetId = product.id){
+                            window.localStorage.removeItem("id2")
+                          }
+                          
+                      }) 
                   }
              }
               //Ropar på funktionen som tar bort produkten från sidan när man trycker på delete knappen
