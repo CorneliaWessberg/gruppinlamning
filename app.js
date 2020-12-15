@@ -76,7 +76,6 @@ const addProduct = function() {
              document.querySelector("#products").appendChild(addProductBox)
               addProductBox.innerHTML = `<li> ${id} </li>  <li> <img class="imgStyle" src="${img}"> <li class="name" > ${name} </li> </li><li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button class="cartBtn" id=` + id + `>   Add to cart  </button></li>`
               
-
               //Skapar nya knappar på produkt-korten/ så att admin kan radera och bearbeta produkter
               const Buttons = document.createElement("div")
               Buttons.classList.add("buttons")
@@ -89,44 +88,70 @@ const addProduct = function() {
               deleteButton.classList.add("delete-btn");                          
               deleteButton.innerText = "Delete";  
 
-              addProductBox.appendChild(Buttons);
+              
+              addProductBox .appendChild(Buttons);
               Buttons.appendChild(editButton);
               Buttons.appendChild(deleteButton);
 
-              //Ropar på funktionen som tar bort produkten från sidan när man trycker på delete knappen
+
+              
+                    //Ropar på funktionen som tar bort produkten från sidan när man trycker på delete knappen
                 deleteButton.addEventListener('click', deleteProduct );
-
-                let edited = JSON.parse(localStorage.getItem("products"))
-
                 
-              // edit funktion som låter admin ändra värderna "namn", "pris" & "description" på en produkt
-                editButton.addEventListener('click' , function(){
-                    editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktnamn: ");
-                    editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktbeskrivning: ");
-                    editButton.parentNode.previousElementSibling.previousElementSibling.innerText = prompt("Pris: ");
+                                    // edit funktion som låter admin ändra värderna "namn", "pris" & "description" på en produkt
+                editButton.addEventListener('click' , editProduct );
+            })
+
+            function editProduct(e) {
+                e.preventDefault();
+                const editButton = e.target;
+                   const editedName = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktnamn: ");
+                   const editedDes = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktbeskrivning: ");
+                   const editedPrice =  editButton.parentNode.previousElementSibling.previousElementSibling.innerText = prompt("Pris: ");  
+
+                    let exist = JSON.parse(localStorage.getItem("products"));
+                    console.log(exist)
+                    exist.map((product) => {
+                        targetId = e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+                        localStorage.removeItem(targetId)
+                    })
                     
-                });
-
-
-
-                
-                // delete function which removes the chosen productfrom the shop
-              function deleteProduct(e) {
+                    
+            }
+            // delete function which removes the chosen productfrom the shop
+            function deleteProduct(e) {
                 e.preventDefault();
                 const deleteButton = e.target;
-                console.log(deleteButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML)
+                
                 const answer = confirm("are you sure you want to delete this item?") 
                   if(answer)  {
                       deleteButton.parentNode.parentNode.remove();
-                      products.map((product)=> {
-                        const id =product.id;
+                      let exist = JSON.parse(localStorage.getItem("products"));
+                      
+                      exist.map((product) => {
+                        product.id = e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
                         
-                        const deleteId = deleteButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML
-                        console.log(deleteId)
-                      })
+                        console.log(product.id)
+                      } )
+                      const removed = exist.splice(deleteButton, 1)
+                      console.log(removed)
+
+                    //   localStorage.setItem("products", JSON.stringify(exist))
+                    //   console.log(exist)
+                    
+
                   }
              }
-          })
+
+             if (window.localStorage.length === 0) {   
+            }
+            else {
+              //Ropar på funktionen som tar bort produkten från sidan när man trycker på delete knappen
+              const delBtn = document.querySelector(".delete-btn")
+                delBtn.addEventListener('click', deleteProduct );
+            
+            }
+          
         }
 
         // Accessing products in order to acces btn Id
