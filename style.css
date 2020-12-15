@@ -198,9 +198,14 @@ body {
   color: #9CC2C2; }
 
 .description {
+  display: flex;
   font-size: 2vw;
   font-weight: 500;
-  margin-bottom: 2vw; }
+  margin-bottom: 2vw;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  justify-content: center; }
 
 .price {
   font-size: 2.5vw;

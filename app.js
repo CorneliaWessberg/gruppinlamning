@@ -127,21 +127,30 @@ const addProduct = function() {
                   if(answer)  {
                       deleteButton.parentNode.parentNode.remove();
                       let exist = JSON.parse(localStorage.getItem("products"));
-                      console.log(exist)
+                      
                       exist.map((product) => {
-                          targetId = e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
-                          if(targetId = product.id){
-                            window.localStorage.removeItem("id2")
-                          }
-                          
-                      }) 
+                        product.id = e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+                        
+                        console.log(product.id)
+                      } )
+                      const removed = exist.splice(deleteButton, 1)
+                      console.log(removed)
+
+                    //   localStorage.setItem("products", JSON.stringify(exist))
+                    //   console.log(exist)
+                    
+
                   }
              }
+
+             if (window.localStorage.length === 0) {   
+            }
+            else {
               //Ropar på funktionen som tar bort produkten från sidan när man trycker på delete knappen
               const delBtn = document.querySelector(".delete-btn")
                 delBtn.addEventListener('click', deleteProduct );
             
-
+            }
           
         }
 
