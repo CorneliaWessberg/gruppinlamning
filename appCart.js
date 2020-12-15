@@ -13,7 +13,7 @@ window.onload = function () {
              addProductBox.className = "box";
          
              document.querySelector("#products").appendChild(addProductBox)
-              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> ${price} </li> <button class="cartBtn" id="btn"> Remove from cart</button>`
+              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> ${price} </li> <li> <p> Quantity: <input id="exemplar"> </p> <li> <button class="cartBtn" id="btn">  &#128465; </button>`
               
 
               // adding etra buttons for the customer to be able to remove items from their shoppingcarst

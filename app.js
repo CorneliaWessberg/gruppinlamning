@@ -96,6 +96,9 @@ const addProduct = function() {
               //Ropar på funktionen som tar bort produkten från sidan när man trycker på delete knappen
                 deleteButton.addEventListener('click', deleteProduct );
 
+                let edited = JSON.parse(localStorage.getItem("products"))
+
+                
               // edit funktion som låter admin ändra värderna "namn", "pris" & "description" på en produkt
                 editButton.addEventListener('click' , function(){
                     editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktnamn: ");
