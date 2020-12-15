@@ -65,7 +65,7 @@ body {
     font-size: 4vw;
     font-weight: 900; }
   
-  /* Birger shoppingcart header */
+  /* Birger shoppingcart header 
   .headershoppingcart {
     background-color: #cacaca;
     background-image: url(bilder/no_france.jpg);
@@ -73,7 +73,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 13vw; }
+    height: 13vw; }*/
   
   #navbar2 {
     display: flex;
@@ -118,9 +118,11 @@ body {
   
   /* Birger shoppingcart Footer */
   .footershoppingcart {
-    background-color: #181818;
-    color: white;
-    font-size: 2vw; }
+    background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    height: 10vw; }
   
   .imgStyle {
     height: 23vw;
