@@ -200,3 +200,13 @@ form {
 .frakt {
   text-align: center;
   font-size: 1vh; }
+
+
+
+
+
+  .total1 {
+    display: flex;
+    justify-content: center;
+    font-size: small;
+}
