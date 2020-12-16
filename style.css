@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-size: 1.5vw;
-  background-color: #dff8fc;
+  background-color: #FAFCFC;
   width: 100%; }
 
 #header {
@@ -9,25 +9,42 @@ body {
 
 #headersec {
   height: 30vw;
-  background-image: url("bilder/headerback.jpg");
+  background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
   background-position: center;
   background-size: cover; }
 
 #navbar {
-  background-color: #a8969f;
+  background-image: linear-gradient(to right top, #ccb4ea, #a3b2de, #8aacc7, #82a2ac, #849595);
   display: flex;
   list-style: none;
-  margin-top: 0; }
+  margin-top: 0;
+  padding-right: 3vw;
+  align-items: space-between;
+  box-shadow: 3px 3px #E3F0F0; }
+
+#navbar a {
+  list-style-type: none;
+  text-decoration: none;
+  color: #F0FFFF;
+  font-family: 'Times New Roman', Times, serif; }
 
 #navbar a:hover {
-  color: red;
   font-size: 2vw;
-  background-color: white;
-  border: 2px solid grey;
-  text-decoration: none; }
+  color: #76E3E3;
+  background-color: #F0FFFF;
+  border: solid 1px blue;
+  border-radius: 5px;
+  padding: 3px;
+  line-height: 3vw; }
 
 .item {
-  margin-left: 2vw; }
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
+  margin-left: 2vw;
+  text-decoration: none;
+  font-size: 1.5vw;
+  font-weight: 600;
+  color: #F0FFFF; }
 
 #about {
   margin-left: 65vw; }
@@ -35,9 +52,7 @@ body {
 #h1--text {
   display: flex;
   justify-content: center;
-  width: 50vw;
-  border: 4px solid #1b2066;
-  background-color: #4f4f9c; }
+  width: 80vw; }
 
 #h1 {
   font-size: 2vw;
@@ -45,7 +60,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #0799dd; }
+  color: #F0FFFF;
+  font-family: 'Dancing Script', cursive;
+  font-size: 4vw;
+  font-weight: 900; }
 
 /* Birger shoppingcart header */
 .headershoppingcart {
@@ -85,6 +103,19 @@ body {
   justify-content: space-around;
   font-size: 4vw; }
 
+#buy {
+  margin-top: 10vw;
+  padding: 1.5vw;
+  color: white;
+  border-radius: 10px;
+  margin-left: 3vw;
+  margin-bottom: 4vw;
+  background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
+  font-size: 2vw;
+  border: white;
+  font-family: 'Times New Roman', Times, serif;
+  box-shadow: 3px 3px #E3F0F0; }
+
 /* Birger shoppingcart Footer */
 .footershoppingcart {
   background-color: #181818;
@@ -100,78 +131,130 @@ body {
 
 .box {
   display: flex;
-  width: 20vw;
+  width: 35vw;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 5px solid #3a0101;
-  background-color: #9b0202;
-  border-radius: 20px;
+  border: 1px solid lightblue;
+  background-color: #FAFCFC;
   list-style: none;
   line-height: 35px;
   font-family: 'Times New Roman', Times, serif;
   margin: 1rem;
-  color: #4fc6f5;
-  padding: 10px; }
+  color: #9CC2C2;
+  padding: 10px;
+  font-family: 'Dancing Script', cursive;
+  box-shadow: 5px 5px #E3F0F0; }
 
 #inputImage {
-  width: 20vw;
+  width: 30vw;
   font-size: 1.5vw;
   padding: 5px;
-  border: 1px solid #a8969f; }
+  border: 1px solid #a8969f;
+  border-radius: 10px;
+  margin-left: 2vw; }
 
 #inputText {
   padding: 5px;
   border: 1px solid #a8969f;
-  width: 20vw;
-  font-size: 1.5vw; }
+  width: 30vw;
+  font-size: 1.5vw;
+  margin-left: 2vw;
+  border-radius: 10px; }
 
 #inputID {
   padding: 5px;
   border: 1px solid #a8969f;
-  width: 20vw;
+  width: 30vw;
+  border-radius: 10px;
+  margin-left: 2vw;
   font-size: 1.5vw; }
 
 #inputDescription {
   padding: 5px;
   border: 1px solid #a8969f;
-  width: 20vw;
+  width: 30vw;
+  border-radius: 10px;
+  margin-left: 2vw;
   font-size: 1.5vw; }
 
 #inputNumber {
   padding: 5px;
   border: 1px solid #a8969f;
-  width: 20vw;
+  width: 30vw;
+  border-radius: 10px;
+  margin-left: 2vw;
   font-size: 1.5vw; }
 
 .name {
-  text-decoration: underline #1b2066;
-  font-size: 1.5rem;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  padding-bottom: 1vw;
+  padding-top: 1vw;
+  border-radius: 15px;
+  margin-bottom: 1.5vw;
+  font-size: 4.5vw;
   font-weight: 700;
-  border: 3px solid #1b2066;
-  padding: 6px;
-  background-color: #4f4f9c;
-  color: #59ccfd;
-  border-radius: 5px; }
+  color: #9CC2C2; }
 
 .description {
-  font-size: 18px;
+  font-size: 2vw;
   font-weight: 500;
-  margin-bottom: 3px; }
+  margin-bottom: 2vw; }
 
 .price {
-  font-size: 18px;
+  font-size: 2.5vw;
   font-weight: 600;
-  margin-bottom: 3px; }
+  margin-bottom: 2vw; }
+
+.cartBtn {
+  padding: 10px;
+  border: solid 1px white;
+  border-radius: 10px;
+  width: 10vw;
+  margin-bottom: 1vw; }
+
+.editBtn {
+  padding: 7px;
+  width: 5vw;
+  margin-right: 1vw;
+  border: solid 1px white;
+  border-radius: 10px; }
+
+.delete-btn {
+  padding: 7px;
+  width: 5vw;
+  border: solid 1px white;
+  border-radius: 10px; }
 
 form {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-top: 6vw;
+  margin-bottom: 6vw;
+  line-height: 2vw;
+  justify-content: center; }
+
+.inputtext {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2.5vw;
+  color: #9CC2C2; }
 
 #addBtn {
-  padding: 5px;
-  border: 1px solid #a8969f; }
+  background-image: linear-gradient(to right top, #ccb4ea, #a3b2de, #8aacc7, #82a2ac, #849595);
+  padding: 15px;
+  border: solid 1px white;
+  box-shadow: 3px 3px #E3F0F0;
+  width: 25vw;
+  border-radius: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.8vw;
+  margin-top: 2vw;
+  color: #F0FFFF; }
+
+#cart {
+  font-size: 5vw; }
 
 #products {
   display: flex;
@@ -179,14 +262,28 @@ form {
   justify-content: center; }
 
 #goToCart {
+<<<<<<< HEAD
   padding: 5vw;
   height: 3vw; }
+=======
+  padding: 1.5vw;
+  color: white;
+  border-radius: 10px;
+  margin-left: 3vw;
+  margin-bottom: 4vw;
+  background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
+  font-size: 2vw;
+  border: white;
+  font-family: 'Times New Roman', Times, serif;
+  box-shadow: 3px 3px #E3F0F0; }
+>>>>>>> 61dab0d2f762d22bf6f07a976d12ae9a40bb9a60
 
 .footer {
-  background-color: gray;
+  background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
   position: relative;
   width: 100%;
-  bottom: 0; }
+  bottom: 0;
+  height: 10vw; }
 
 .footer-lista {
   font-size: 1.5vh; }

@@ -41,23 +41,8 @@ const addProduct = function() {
 }
 
 
-   // Accessing products in order to acces btn Id
-   const getStorage = JSON.parse(localStorage.getItem("products"));
-
-   // another safeguard for error  "map off null"
-       if (window.localStorage.length === 0) {   
-       }
-       else {
-
-        // btn that calls add to shoppingcart function
-       getStorage.map((product)=> {
-           const id = product.id
-           const usableBtnId = "#" + id
-           
-           const btnAddToCart = document.querySelector(usableBtnId);
-           btnAddToCart.addEventListener("click", addToShoppingcart);
-    } )
-   }  
+   
+     
 
     // another function that is going to add a selected product to the shoppingcart (But not really because admin should only have a preview of how it looks)
     const addToShoppingcart = function () {
@@ -89,7 +74,7 @@ const addProduct = function() {
              addProductBox.className = "box";
          
              document.querySelector("#products").appendChild(addProductBox)
-              addProductBox.innerHTML = `<li> ${id} </li> <li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button id=` + id + `>   Add to cart  </button></li>`
+              addProductBox.innerHTML = `<li> ${id} </li>  <li> <img class="imgStyle" src="${img}"> <li class="name" > ${name} </li> </li><li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button class="cartBtn" id=` + id + `>   Add to cart  </button></li>`
               
 
               //Skapar nya knappar på produkt-korten/ så att admin kan radera och bearbeta produkter
@@ -118,6 +103,9 @@ const addProduct = function() {
                     editButton.parentNode.previousElementSibling.previousElementSibling.innerText = prompt("Pris: ");
                     
                 });
+
+
+
                 
                 // delete function which removes the chosen productfrom the shop
               function deleteProduct(e) {
@@ -138,6 +126,23 @@ const addProduct = function() {
           })
         }
 
+        // Accessing products in order to acces btn Id
+   const getStorage = JSON.parse(localStorage.getItem("products"));
+
+   // another safeguard for error  "map off null"
+       if (window.localStorage.length === 0) {   
+       }
+       else {
+        // btn that calls add to shoppingcart function
+       getStorage.map((product)=> {
+           const id = product.id
+           const usableBtnId = "#" + id
+           
+           const btnAddToCart = document.querySelector(usableBtnId);
+           btnAddToCart.addEventListener("click", addToShoppingcart);
+    } )
+
+}
 
    // function to check that the input field for "name of the product" isnt empty 
 var checkInputValueName = function (e) {
