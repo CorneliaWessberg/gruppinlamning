@@ -105,9 +105,9 @@ const addProduct = function() {
             function editProduct(e) {
                 e.preventDefault();
                 const editButton = e.target;
-                   const editedName = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktnamn: ");
-                   const editedDes = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktbeskrivning: ");
-                   const editedPrice =  editButton.parentNode.previousElementSibling.previousElementSibling.innerText = prompt("Pris: ");  
+                   const editedName = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktnamn:");
+                   const editedDes = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktbeskrivning:");
+                   const editedPrice =  editButton.parentNode.previousElementSibling.previousElementSibling.innerText = prompt("Pris:");  
 
                     let exist = JSON.parse(localStorage.getItem("products"));
                     console.log(exist)
@@ -125,20 +125,29 @@ const addProduct = function() {
                 
                 const answer = confirm("are you sure you want to delete this item?") 
                   if(answer)  {
+
+                    
                       deleteButton.parentNode.parentNode.remove();
                       let exist = JSON.parse(localStorage.getItem("products"));
-                      
-                      exist.map((product) => {
-                        product.id = e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
-                        
-                        console.log(product.id)
-                      } )
-                      const removed = exist.splice(deleteButton, 1)
-                      console.log(removed)
 
-                    //   localStorage.setItem("products", JSON.stringify(exist))
-                    //   console.log(exist)
-                    
+                      console.log(exist.length)
+                    if(exist.length === 1) {  
+                        window.localStorage.clear();
+                    }
+                    else {  
+                        exist.map((product) => {
+                            product.id = e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+                            
+                            console.log(product.id)
+                          } )
+                          const removed = exist.splice(deleteButton, 1)
+                          console.log(removed)
+    
+                          localStorage.setItem("products", JSON.stringify(exist));
+    
+                          console.log(exist.length)
+                    }
+                
 
                   }
              }
@@ -147,8 +156,8 @@ const addProduct = function() {
             }
             else {
               //Ropar på funktionen som tar bort produkten från sidan när man trycker på delete knappen
-              const delBtn = document.querySelector(".delete-btn")
-                delBtn.addEventListener('click', deleteProduct );
+            //   const delBtn = document.querySelector(".delete-btn")
+            //     delBtn.addEventListener('click', deleteProduct );
             
             }
           
