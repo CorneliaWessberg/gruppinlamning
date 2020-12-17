@@ -136,11 +136,11 @@ const addProduct = function() {
                     }
                     else {  
                         exist.map((product) => {
-                            product.id = e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
-                            
+                            compareId = e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
                             console.log(product.id)
+                            
                           } )
-                          const removed = exist.splice(deleteButton, 1)
+                          const removed = exist.splice(Number(compareId), 1)
                           console.log(removed)
     
                           localStorage.setItem("products", JSON.stringify(exist));
