@@ -64,7 +64,7 @@ const addProduct = function() {
         else {
         
             //mapping through products onject and creating elements in HTML to show the products in different boxes
-         products.map((product) => {
+         products.map((product, index) => {
              const id = product.id;
              const img = product.img;
              const name = product.name;
@@ -86,7 +86,8 @@ const addProduct = function() {
 
               const deleteButton = document.createElement("button")
               deleteButton.classList.add("delete-btn");                          
-              deleteButton.innerText = "Delete";  
+              deleteButton.innerText = "Delete";
+              deleteButton.setAttribute("id", index); 
 
               
               addProductBox .appendChild(Buttons);
@@ -94,9 +95,12 @@ const addProduct = function() {
               Buttons.appendChild(deleteButton);
 
 
-              
+              const delBtns = document.querySelectorAll(".delete-btn")
                     //Ropar på funktionen som tar bort produkten från sidan när man trycker på delete knappen
-                deleteButton.addEventListener('click', deleteProduct );
+                    for (let i = 0; i < delBtns.length;i++ ) {
+                        delBtns[i].addEventListener('click', deleteProduct );
+                    }
+                
                 
                                     // edit funktion som låter admin ändra värderna "namn", "pris" & "description" på en produkt
                 editButton.addEventListener('click' , editProduct );
@@ -118,36 +122,35 @@ const addProduct = function() {
                     
                     
             }
+
+            
             // delete function which removes the chosen productfrom the shop
             function deleteProduct(e) {
                 e.preventDefault();
-                const deleteButton = e.target;
+                
                 
                 const answer = confirm("are you sure you want to delete this item?") 
                   if(answer)  {
 
-                    
-                      deleteButton.parentNode.parentNode.remove();
-                      let exist = JSON.parse(localStorage.getItem("products"));
+                    e.target.parentNode.parentNode.remove();
 
-                      console.log(exist.length)
+                    
+                    
+
+                      let exist = JSON.parse(localStorage.getItem("products"));
+                    console.log(exist)
+                      
                     if(exist.length === 1) {  
                         window.localStorage.clear();
                     }
-                    else {  
-                        exist.map((product) => {
-                            compareId = e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
-                            console.log(product.id)
-                            
-                          } )
-                          const removed = exist.splice(Number(compareId), 1)
-                          console.log(removed)
-    
-                          localStorage.setItem("products", JSON.stringify(exist));
-    
-                          console.log(exist.length)
+                    else {
+                        
+                        const removed = exist.splice(e.target.id, 1)
+                        console.log(removed)
+                        console.log(exist)
+                        localStorage.setItem("products", JSON.stringify(exist));
                     }
-                
+                    
 
                   }
              }

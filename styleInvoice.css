@@ -1,0 +1,103 @@
+body {
+    max-width: 100%;
+    margin: auto;
+    justify-content: center;
+    background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.justify-content-center {
+    max-width: 50%;
+    margin: auto;
+}
+
+.margin-div-container {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .1rem
+}
+
+.card-body {
+    padding: 1.25rem;
+    text-align: center
+}
+
+.card-title {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.card-header {
+    padding: 1rem 1rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .02);
+    border-bottom: 1px solid rgba(0, 0, 0, .125)
+}
+
+a {
+    text-decoration: none !important
+}
+
+.invoice-color {
+    color: red !important
+}
+
+@media (min-width: 800px) {
+    .wmin-md-400 {
+        min-width: 400px !important
+    }
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1a7a52
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.list-unstyled {
+    list-style-type: none;
+}
+
+.imgStyle {
+    height:10vw;
+    margin-bottom: 1vw; 
+    padding:2px;
+    border: 2px solid  rgb(168, 150, 159);
+    background-color:white;
+}
+
+.name {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 6px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.description {
+    font-size: 18px; 
+    font-weight: 500;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+.price   {
+    font-size: 18px; 
+    font-weight: 600;
+    margin-bottom: 3px; 
+    text-align: center;
+}
