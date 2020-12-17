@@ -522,7 +522,9 @@ form {
   font-family: 'Times New Roman', Times, serif;
   font-size: 1.8vw;
   margin-top: 2vw;
-  color: #F0FFFF; }
+  color: #F0FFFF;
+  cursor: pointer;
+  transition-duration: 0.4s; }
 
 #cart {
   font-size: 5vw; }

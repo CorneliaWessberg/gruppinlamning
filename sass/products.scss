@@ -159,9 +159,12 @@ form {
     font-size: 1.8vw;
     margin-top: 2vw;
     color: #F0FFFF;
-
+    cursor: pointer;
+    transition-duration: 0.4s;
      
 }
+
+
 
 
 
@@ -189,4 +192,5 @@ form {
     border: white;
     font-family: 'Times New Roman', Times, serif;
     box-shadow: 3px 3px #E3F0F0;
+    cursor: pointer;
 }
