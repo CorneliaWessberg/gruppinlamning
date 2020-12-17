@@ -90,7 +90,7 @@ const addProduct = function() {
               deleteButton.setAttribute("id", index); 
 
               
-              addProductBox .appendChild(Buttons);
+              addProductBox.appendChild(Buttons);
               Buttons.appendChild(editButton);
               Buttons.appendChild(deleteButton);
 
@@ -127,18 +127,14 @@ const addProduct = function() {
             // delete function which removes the chosen productfrom the shop
             function deleteProduct(e) {
                 e.preventDefault();
-                
-                
+                 
                 const answer = confirm("are you sure you want to delete this item?") 
                   if(answer)  {
 
                     e.target.parentNode.parentNode.remove();
 
+                    let exist = JSON.parse(localStorage.getItem("products"));
                     
-                    
-
-                      let exist = JSON.parse(localStorage.getItem("products"));
-                    console.log(exist)
                       
                     if(exist.length === 1) {  
                         window.localStorage.clear();
@@ -146,8 +142,6 @@ const addProduct = function() {
                     else {
                         
                         const removed = exist.splice(e.target.id, 1)
-                        console.log(removed)
-                        console.log(exist)
                         localStorage.setItem("products", JSON.stringify(exist));
                     }
                     
@@ -155,14 +149,6 @@ const addProduct = function() {
                   }
              }
 
-             if (window.localStorage.length === 0) {   
-            }
-            else {
-              //Ropar på funktionen som tar bort produkten från sidan när man trycker på delete knappen
-            //   const delBtn = document.querySelector(".delete-btn")
-            //     delBtn.addEventListener('click', deleteProduct );
-            
-            }
           
         }
 

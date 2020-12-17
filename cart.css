@@ -147,8 +147,12 @@ body {
     margin-left: 0;}
     
   
-  #exemplar {
+  .exemplar {
       width:5vw;
+  }
+
+  .delete-btn {
+    margin-right:3vw;
   }
   
   
