@@ -63,18 +63,146 @@ body {
   color: #F0FFFF;
   font-family: 'Dancing Script', cursive;
   font-size: 4vw;
-  font-weight: 900; }
+  font-weight: 900;
+  text-shadow: 2px 2px 4px grey; }
 
 /* Birger shoppingcart header */
-.headershoppingcart {
-  background-color: #cacaca;
-  background-image: url(bilder/no_france.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 13vw; }
+/*.headershoppingcart {
+    background-color: rgb(202, 202, 202);
+    background-image: url(bilder/no_france.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 13vw;
+  }
+  #navbar2 {
+    display: flex;
+    justify-content: space-around;
+  }
+  #navbar2 li {
+    display: inline;
+  }
+  #navbar2 li a {
+    text-decoration: none;
+    text-align: center;
+    float: left;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    color: aquamarine;
+    font-size: 2vw;
+  }
+  #navbar2 li a:hover {
+    color: firebrick;
+  }
+  .right {
+    margin-left: auto;
+  }
+  .h1shoppingcart{
+    color: aquamarine;
+    display: flex;
+    justify-content: space-around;
+    font-size: 4vw;
+  }
+  
+  #buy {
+    margin-top: 10vw;
+    padding: 1.5vw;
+    color: white;
+    border-radius: 10px;
+    margin-left: 3vw;
+    margin-bottom: 4vw;
+    background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
+    font-size: 2vw;
+    border: white;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 3px 3px #E3F0F0;
 
+  }
+  
+
+  /* Birger shoppingcart Footer 
+  .footershoppingcart{
+    background-color: rgb(24, 24, 24);
+    color: white;
+    font-size: 2vw;
+  }*/
+body {
+  margin: 0;
+  font-size: 1.5vw;
+  background-color: #FAFCFC;
+  width: 100%; }
+
+#header {
+  height: 33vw; }
+
+#headersec {
+  height: 30vw;
+  background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
+  background-position: center;
+  background-size: cover; }
+
+#navbar {
+  background-image: linear-gradient(to right top, #ccb4ea, #a3b2de, #8aacc7, #82a2ac, #849595);
+  display: flex;
+  list-style: none;
+  margin-top: 0;
+  padding-right: 3vw;
+  align-items: space-between;
+  box-shadow: 3px 3px #E3F0F0; }
+
+#navbar a {
+  list-style-type: none;
+  text-decoration: none;
+  color: #F0FFFF;
+  font-family: 'Times New Roman', Times, serif; }
+
+#navbar a:hover {
+  font-size: 2vw;
+  color: #76E3E3;
+  background-color: #F0FFFF;
+  border: solid 1px blue;
+  border-radius: 5px;
+  padding: 3px;
+  line-height: 3vw; }
+
+.item {
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
+  margin-left: 2vw;
+  text-decoration: none;
+  font-size: 1.5vw;
+  font-weight: 600;
+  color: #F0FFFF; }
+
+#about {
+  margin-left: 65vw; }
+
+#h1--text {
+  display: flex;
+  justify-content: center;
+  width: 80vw; }
+
+#h1 {
+  font-size: 2vw;
+  height: 29vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #F0FFFF;
+  font-family: 'Dancing Script', cursive;
+  font-size: 4vw;
+  font-weight: 900; }
+
+/* Birger shoppingcart header 
+  .headershoppingcart {
+    background-color: #cacaca;
+    background-image: url(bilder/no_france.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 13vw; }*/
 #navbar2 {
   display: flex;
   justify-content: space-around; }
@@ -117,10 +245,148 @@ body {
   box-shadow: 3px 3px #E3F0F0; }
 
 /* Birger shoppingcart Footer */
-.footershoppingcart {
-  background-color: #181818;
-  color: white;
-  font-size: 2vw; }
+.imgStyle {
+  height: 23vw;
+  margin-bottom: 1vw;
+  padding: 2px;
+  border: 2px solid #a8969f;
+  background-color: white; }
+
+.box {
+  display: flex;
+  width: 95vw;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  border: 1px solid lightblue;
+  background-color: #FAFCFC;
+  list-style: none;
+  line-height: 35px;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 1vw;
+  color: #9CC2C2;
+  padding: 10px;
+  font-family: 'Dancing Script', cursive;
+  box-shadow: 5px 5px #E3F0F0;
+  margin-left: 0; }
+
+#exemplar {
+  width: 5vw; }
+
+.name {
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  padding-bottom: 1vw;
+  padding-top: 1vw;
+  border-radius: 15px;
+  margin-bottom: 1.5vw;
+  font-size: 4.5vw;
+  font-weight: 700;
+  color: #9CC2C2; }
+
+.description {
+  font-size: 2vw;
+  font-weight: 500;
+  margin-bottom: 2vw;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto; }
+
+.price {
+  font-size: 2.5vw;
+  font-weight: 600;
+  margin-bottom: 2vw; }
+
+.cartBtn {
+  padding: 10px;
+  border: solid 1px white;
+  border-radius: 10px;
+  width: 10vw;
+  margin-bottom: 1vw; }
+
+#cart {
+  font-size: 5vw; }
+
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.footer {
+  background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
+  position: relative;
+  background-repeat: repeat;
+  background-position: center;
+  width: 100%;
+  bottom: 0;
+  height: 30vw;
+  font-family: 'Dancing Script', cursive; }
+
+.style {
+  font-family: 'Times New Roman', Times, serif;
+  color: white; }
+
+.content {
+  display: flex;
+  width: 100%;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 2px 2px 4px grey; }
+
+.social {
+  width: 50%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vw;
+  font-size: 4vw; }
+
+.social a {
+  color: white; }
+
+.social a:hover {
+  color: lightblue;
+  font-size: 4.5vw; }
+
+.newsletter {
+  width: 50%;
+  justify-content: center;
+  text-align: center;
+  font-size: 3vw;
+  margin-right: 2vw;
+  align-items: center; }
+
+.newsletter label {
+  margin-bottom: 1.5vw;
+  line-height: 3vw; }
+
+#inputEmail {
+  width: 20vw;
+  border: solid 1px white;
+  border-radius: 15px;
+  padding: 1.5vw;
+  margin-bottom: 1vw;
+  box-shadow: 2px 2px lightgrey; }
+
+#emailBtn {
+  padding: 0.5vw;
+  width: 22vw;
+  border: none;
+  border-radius: 15px;
+  transition-duration: 0.4s;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.3vw;
+  cursor: pointer;
+  color: darkgrey;
+  box-shadow: 2px 2px lightgrey; }
+
+#emailBtn:hover {
+  color: blue;
+  background-color: white; }
+
+@media screen and (max-width: 600px) {
+  footer {
+    height: 100%; } }
 
 .imgStyle {
   height: 23vw;
@@ -198,9 +464,14 @@ body {
   color: #9CC2C2; }
 
 .description {
+  display: flex;
   font-size: 2vw;
   font-weight: 500;
-  margin-bottom: 2vw; }
+  margin-bottom: 2vw;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  justify-content: center; }
 
 .price {
   font-size: 2.5vw;
@@ -281,21 +552,43 @@ form {
 .footer {
   background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
   position: relative;
+  background-repeat: repeat;
+  background-position: center;
   width: 100%;
   bottom: 0;
-  height: 10vw; }
+  height: 30vw;
+  font-family: 'Dancing Script', cursive; }
 
-.footer-lista {
-  font-size: 1.5vh; }
+.style {
+  font-family: 'Times New Roman', Times, serif;
+  color: white; }
 
-.copy {
+.content {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 15px;
-  font-size: 1vh; }
+  width: 100%;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 2px 2px 4px grey; }
 
-.frakt {
+.social {
+  width: 50%;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vw;
+  font-size: 4vw; }
+
+.social a {
+  color: white; }
+
+.social a:hover {
+  color: lightblue;
+  font-size: 4.5vw; }
+
+.newsletter {
+  width: 50%;
+  justify-content: center;
+  text-align: center;
+<<<<<<< HEAD
   font-size: 1vh; }
 
 
@@ -307,3 +600,40 @@ form {
     justify-content: center;
     font-size: small;
 }
+=======
+  font-size: 3vw;
+  margin-right: 2vw;
+  align-items: center; }
+
+.newsletter label {
+  margin-bottom: 1.5vw;
+  line-height: 3vw; }
+
+#inputEmail {
+  width: 20vw;
+  border: solid 1px white;
+  border-radius: 15px;
+  padding: 1.5vw;
+  margin-bottom: 1vw;
+  box-shadow: 2px 2px lightgrey; }
+
+#emailBtn {
+  padding: 0.5vw;
+  width: 22vw;
+  border: none;
+  border-radius: 15px;
+  transition-duration: 0.4s;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.3vw;
+  cursor: pointer;
+  color: darkgrey;
+  box-shadow: 2px 2px lightgrey; }
+
+#emailBtn:hover {
+  color: blue;
+  background-color: white; }
+
+@media screen and (max-width: 600px) {
+  footer {
+    height: 100%; } }
+>>>>>>> 49f4c95703ab631be79e4363457ea2695fb6f026

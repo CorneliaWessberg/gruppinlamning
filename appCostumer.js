@@ -10,7 +10,7 @@ const itemsInside= document.querySelector("#itemsInside")
 let products = JSON.parse(localStorage.getItem("products"))
 
 //safeguard
-        if (window.localStorage.length === 0) {   
+        if (window.localStorage.length === 0) {
         }
         else {
         
@@ -50,7 +50,7 @@ let products = JSON.parse(localStorage.getItem("products"))
 
         // creating another object where the products which the customer wants to buy are added and set to a different local storage
     let addedToCart = {};
-    addedToCart.addedPrice = btnAddToCart.parentNode.previousElementSibling.innerHTML;
+    addedToCart.addedPrice = product.price
     addedToCart.addedDescription = btnAddToCart.parentNode.previousElementSibling.previousElementSibling.innerHTML;
     addedToCart.addedName = btnAddToCart.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
     addedToCart.addedUrl = btnAddToCart.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.src; 

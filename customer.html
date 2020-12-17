@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <script src="appCostumer.js" defer></script>
     <title>Customer</title>
 </head>
@@ -55,24 +56,29 @@
         </main>
         
         <footer class="footer">
-            <div>
-                <ul class="footer-lista">
-                    <li>  <i class="far fa-address-book"></i>  Kontakt: </li>
-                    <li> <i class="fas fa-envelope-square"></i>  E-mail: </li>
-                    <li> <i class="fas fa-phone-square-alt"></i> Phone: </li>          
-                </ul>
-            </div>
-    
-            <div>
-                <p class="frakt">Fri frakt</p>
-            </div>
-    
-            <div class="copy">
-            2020 &copy;
-            </div>
+            <div class="style">
+                <div class="content">
+                    <section class="social">
+                        <p>Free shipping</p>
+                        <a href=""><span class="fab fa-paypal"></span></a>
+                        <a href=""><span class="fab fa-apple-pay"></span></a>
+                        <a href=""><span class="fab fa-cc-visa"></span> </a>   
+                    </section>     
+                
+         
+
+                    <section class="newsletter">
+               
+                        <form action="">
+                        <label for="contact">Submit your e-mail here to get our newsletter!</label>
+                        <input type="text" id="inputEmail" placeholder="example@gmail.com"></input>
+                        <input type="submit" name="button" id="emailBtn">
+                        </form>
+                    </section>
+                 
+                </div>
+             </div>
         </footer>
       
-        
-      
-</body>
+    </body>
 </html>

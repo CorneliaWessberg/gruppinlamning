@@ -3,25 +3,98 @@
 .footer {
   background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
     position: relative;   
+    background-repeat: repeat;
+    background-position: center;
     width: 100%;
+    //margin: auto;
     bottom: 0;
-    height: 10vw;
+    height: 30vw;
+    font-family: 'Dancing Script', cursive;
+    
+  
+}
+
+.style {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+
+}
+
+.content { 
+    display: flex;
+    width: 100%;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 2px 2px 4px grey;
+   
+}
+
+.social { 
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vw;
+    font-size: 4vw;
+   
+}
+
+.social a {
+    color: white;
+}
+
+.social a:hover {
+    color: lightblue;
+    font-size: 4.5vw;
+}
+
+.newsletter {
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+    font-size: 3vw;
+    margin-right: 2vw;
+    align-items: center;
+    
     
 }
 
+.newsletter label {
+    margin-bottom: 1.5vw;
+    line-height: 3vw;
+}
 
-.footer-lista{
-    font-size: 1.5vh;
+
+
+
+#inputEmail {
+   width: 20vw;
+   border: solid 1px white;
+   border-radius: 15px;
+    padding: 1.5vw;
+    margin-bottom: 1vw;
+    box-shadow: 2px 2px lightgrey;
 }
- 
-.copy {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 15px;
-    font-size: 1vh;
+
+#emailBtn {
+    padding: 0.5vw;
+    width: 22vw;
+    border: none;
+    border-radius: 15px;
+    transition-duration: 0.4s;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.3vw;
+    cursor: pointer;
+    color: darkgrey;
+    box-shadow: 2px 2px lightgrey;
 }
- 
-.frakt {
-    text-align: center;
-    font-size: 1vh;
+
+
+#emailBtn:hover {
+    color: blue;
+    background-color: white;
 }
+
+@media screen and (max-width: 600px) {
+    footer {
+   height: 100%;
+}}

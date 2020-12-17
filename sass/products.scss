@@ -84,9 +84,14 @@
 }
 
 .description {
+    display:flex;
     font-size: 2vw; 
     font-weight: 500;
     margin-bottom: 2vw;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    justify-content: center;
 }
 
 .price   {
@@ -157,6 +162,8 @@ form {
 
      
 }
+
+
 
 #cart {
     font-size: 5vw;
