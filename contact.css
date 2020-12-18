@@ -26,16 +26,68 @@ body {
 }
 
 #first_name {
-    padding-top: 10px;
+    border: solid 0.5px grey;
+    padding: 0.6vw;
+    border-radius: 10px;
+    
+
 }
 
+#last_name {
+    border: solid 0.5px grey;
+    padding: 0.6vw;
+    border-radius: 10px;
+}
+
+#mejl {
+    border: solid 0.5px grey;
+    padding: 0.6vw;
+    border-radius: 10px;
+}
+
+#adress {
+    border: solid 0.5px grey;
+    padding: 0.6vw;
+    border-radius: 10px;
+}
+
+#phone {
+    border: solid 0.5px grey;
+    padding: 0.6vw;
+    border-radius: 10px;
+}
+#textarea {
+border: solid 0.5px grey;
+padding: 0.6vw;
+border-radius: 10px;
+}
 .row-header {
     text-align: center;
+    color: darkgray;
+    text-shadow: 2px 2px 4px grey;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2vw;
 
 }
 
-.submit {
+#submitBtn {
+    padding: 1vw;
+    border:none; 
+    border-radius: 10px;
+    width: 12vw;
+    cursor: pointer;
+    margin-right: 1vw;
+
+}
+#submit {
     font-size: 18px;
+    border: none; 
+    border-radius: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2vw;
+    color: darkgray;
+    text-shadow: 1px 1px 3px grey;
+    
 }
 
 

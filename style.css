@@ -117,10 +117,8 @@ body {
     border: white;
     font-family: 'Times New Roman', Times, serif;
     box-shadow: 3px 3px #E3F0F0;
-
   }
   
-
   /* Birger shoppingcart Footer 
   .footershoppingcart{
     background-color: rgb(24, 24, 24);
@@ -522,7 +520,9 @@ form {
   font-family: 'Times New Roman', Times, serif;
   font-size: 1.8vw;
   margin-top: 2vw;
-  color: #F0FFFF; }
+  color: #F0FFFF;
+  cursor: pointer;
+  transition-duration: 0.4s; }
 
 #cart {
   font-size: 5vw; }
@@ -533,10 +533,6 @@ form {
   justify-content: center; }
 
 #goToCart {
-<<<<<<< HEAD
-  padding: 5vw;
-  height: 3vw; }
-=======
   padding: 1.5vw;
   color: white;
   border-radius: 10px;
@@ -546,8 +542,8 @@ form {
   font-size: 2vw;
   border: white;
   font-family: 'Times New Roman', Times, serif;
-  box-shadow: 3px 3px #E3F0F0; }
->>>>>>> 61dab0d2f762d22bf6f07a976d12ae9a40bb9a60
+  box-shadow: 3px 3px #E3F0F0;
+  cursor: pointer; }
 
 .footer {
   background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
@@ -588,19 +584,6 @@ form {
   width: 50%;
   justify-content: center;
   text-align: center;
-<<<<<<< HEAD
-  font-size: 1vh; }
-
-
-
-
-
-  .total1 {
-    display: flex;
-    justify-content: center;
-    font-size: small;
-}
-=======
   font-size: 3vw;
   margin-right: 2vw;
   align-items: center; }
@@ -636,4 +619,3 @@ form {
 @media screen and (max-width: 600px) {
   footer {
     height: 100%; } }
->>>>>>> 49f4c95703ab631be79e4363457ea2695fb6f026

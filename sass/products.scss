@@ -159,15 +159,20 @@ form {
     font-size: 1.8vw;
     margin-top: 2vw;
     color: #F0FFFF;
-
+    cursor: pointer;
+    transition-duration: 0.4s;
      
 }
+
+
 
 
 
 #cart {
     font-size: 5vw;
 }
+
+
 
 
 #products {
@@ -177,14 +182,6 @@ form {
 }
 
 #goToCart {
-<<<<<<< HEAD
-    padding: 5vw;
-    height: 3vw;
-
-
-}
-
-=======
     padding: 1.5vw;
     color: white;
     border-radius: 10px;
@@ -195,5 +192,5 @@ form {
     border: white;
     font-family: 'Times New Roman', Times, serif;
     box-shadow: 3px 3px #E3F0F0;
+    cursor: pointer;
 }
->>>>>>> 61dab0d2f762d22bf6f07a976d12ae9a40bb9a60
