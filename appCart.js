@@ -7,11 +7,11 @@ window.onload = function () {
 
     // map loopar igenom arrayen products
     products.map((addedToCart) => {
-        const img = addedToCart.addedUrl;
-        const name = addedToCart.addedName;
+        
         // gör om price till en float istället för en sträng
         const price = parseFloat(addedToCart.addedPrice);
-
+        const quantity = document.querySelector(".quantity")
+        // const quantityPrice = price * 
         // räknar ut totalen, plussar på värdet för varje varv i loopen
         totalPrice += price
         console.log(totalPrice)
@@ -30,7 +30,7 @@ window.onload = function () {
              addProductBox.className = "box";
          
              document.querySelector("#products").appendChild(addProductBox)
-              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="price"> price: ${price} kr </li> <li> <p> Quantity: <input class="exemplar" > </p> </li> `
+              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="price"> price: ${price} kr </li> <li> <p class= "quantity"> Quantity: <input class="exemplar" > </p> </li> `
               
               const removeButton = document.createElement("button")
               removeButton.classList.add("delete-btn");                          
