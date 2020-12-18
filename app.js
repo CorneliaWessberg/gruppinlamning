@@ -74,7 +74,7 @@ const addProduct = function() {
              addProductBox.className = "box";
          
              document.querySelector("#products").appendChild(addProductBox)
-              addProductBox.innerHTML = `<li> ${id} </li>  <li> <img class="imgStyle" src="${img}"> <li class="name" > ${name} </li> </li><li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button class="cartBtn" id=` + id + `>   Add to cart  </button></li>`
+              addProductBox.innerHTML = `<li>${id}</li>  <li> <img class="imgStyle" src="${img}"> <li class="name" > ${name} </li> </li><li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button class="cartBtn" id=` + id + `>   Add to cart  </button></li>`
               
               //Skapar nya knappar på produkt-korten/ så att admin kan radera och bearbeta produkter
               const Buttons = document.createElement("div")
@@ -106,21 +106,35 @@ const addProduct = function() {
                 editButton.addEventListener('click' , editProduct );
             })
 
+            //function that edits the productcards
             function editProduct(e) {
                 e.preventDefault();
                 const editButton = e.target;
-                   const editedName = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktnamn:");
-                   const editedDes = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktbeskrivning:");
-                   const editedPrice =  editButton.parentNode.previousElementSibling.previousElementSibling.innerText = prompt("Pris:");  
+                const editedName = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktnamn:");
+                const editedDes = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktbeskrivning:");
+                const editedPrice = editButton.parentNode.previousElementSibling.previousElementSibling.innerText = prompt("Pris:");
+                const targetId = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
 
-                    let exist = JSON.parse(localStorage.getItem("products"));
-                    console.log(exist)
-                    exist.map((product) => {
-                        targetId = e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
-                        localStorage.removeItem(targetId)
-                    })
-                    
-                    
+                //hämtar produkterna från localStorage
+                let exist = JSON.parse(localStorage.getItem("products"));
+                console.log(exist)
+                var thisProduct = null
+                //loopar igenom befintligt objekt från local storage
+                for (var i = 0; i < exist.length; i++) {
+                    thisProduct = exist[i]
+                    //lägger in de nya värdena i befintlig produkt
+                    if (thisProduct.id === targetId) {
+                        thisProduct.name = editedName
+                        thisProduct.description = editedDes
+                        thisProduct.price = editedPrice
+                        //sparar den nya produkten i localStorage
+                        localStorage.setItem("products", JSON.stringify(exist));
+                        //färdigt, loopen och functionen stoppas
+                        break
+
+                    }
+                }
+                
             }
 
             
