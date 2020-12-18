@@ -16,7 +16,7 @@ window.onload = function () {
         totalPrice += price
         console.log(totalPrice)
         const totalNode = document.getElementById("total");
-        totalNode.innerHTML = `Total: ${totalPrice}`
+        totalNode.innerHTML = `Total: ${totalPrice} kr` 
     
     })
         
@@ -30,7 +30,7 @@ window.onload = function () {
              addProductBox.className = "box";
          
              document.querySelector("#products").appendChild(addProductBox)
-              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="price"> ${price} </li> <li> <p> Quantity: <input class="exemplar" > </p> </li> `
+              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="price"> price: ${price} kr </li> <li> <p> Quantity: <input class="exemplar" > </p> </li> `
               
               const removeButton = document.createElement("button")
               removeButton.classList.add("delete-btn");                          
