@@ -76,7 +76,6 @@ window.onload = function () {
 // function that purchases the products in the cart for the customer and resetting the local storage for the cart
 // also moves the customer to a page with their invoice (reciept for download)
 let buyItems = function() {
-    localStorage.removeItem("cartProducts")
     window.document.location="./invoice.html";
 }
 const buy = document.querySelector("#buy")
