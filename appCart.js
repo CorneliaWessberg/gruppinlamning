@@ -16,7 +16,7 @@ window.onload = function () {
         totalPrice += price
         console.log(totalPrice)
         const totalNode = document.getElementById("total");
-        totalNode.innerHTML = `Total: ${totalPrice}`
+        totalNode.innerHTML = `Total ${totalPrice}:-`
     
     })
         

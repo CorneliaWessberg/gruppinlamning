@@ -105,14 +105,14 @@ body {
     font-size: 4vw; }
   
   #buy {
-    margin-top: 10vw;
+    margin-top: 2vw;
     padding: 1.5vw;
     color: white;
     border-radius: 10px;
     margin-left: 3vw;
     margin-bottom: 4vw;
     background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
-    font-size: 2vw;
+    font-size: 1vw;
     border: white;
     font-family: 'Times New Roman', Times, serif;
     box-shadow: 3px 3px #E3F0F0; }
@@ -299,3 +299,26 @@ body {
    height: 100%;
 }}
   
+
+
+
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#total-div {
+  max-height: 4rem;
+  margin-top: 2vw;
+  margin-bottom: 4vw;
+  padding: 1vw;
+  border-radius: 10px;
+  color: white;
+  background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
+  font-size: 1vw;
+  border: white;
+  font-family: 'Times New Roman', Times, serif;
+  box-shadow: 3px 3px #E3F0F0;
+
+}
+
