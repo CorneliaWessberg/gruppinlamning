@@ -29,12 +29,40 @@ document.getElementById("download")
             margin: 1,
             filename: 'invoice.pdf',
             image: { type: 'jpeg', quality: 1 },
+            html2canvas:  { scale: 2, useCORS: true },
             jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
         };
         html2pdf().from(invoice).set(opt).save();
     });
 
 
+/*
+git add .
+
+git commit -m "brger"
+
+git pull origin master
+
+git add .
+
+git commit -m "ex"
+
+git push origin master */
+
+
+
+    
+/* document.getElementById("download")
+    .addEventListener("click", function() {
+        const invoice = document.getElementById("invoice");
+        var img = new Image();
+        img.src = path.resolve('sample.jpg');
+    
+        var doc = new jsPDF('p', 'mm', 'a3');  // optional parameters
+        doc.addImage(img, 'JPEG', 1, 2);
+        doc.save("new.pdf");
+    }); */
+    
 /*     var doc = new jsPDF("download") 
     printPdf = ("click", () => {
     doc.text('Jspdf text!', 10, 10) 

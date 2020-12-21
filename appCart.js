@@ -10,8 +10,9 @@ window.onload = function () {
         
         // gör om price till en float istället för en sträng
         const price = parseFloat(addedToCart.addedPrice);
-        const quantity = document.querySelector(".quantity")
-        // const quantityPrice = price * 
+        // const quantity = document.querySelector(".quantity").value
+        // const quantityPrice = price * quantity;
+        // console.log(quantityPrice)
         // räknar ut totalen, plussar på värdet för varje varv i loopen
         totalPrice += price
         console.log(totalPrice)
