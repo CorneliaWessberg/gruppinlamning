@@ -8,7 +8,7 @@ body {
 }
 
 .justify-content-center {
-    max-width: 50%;
+    max-width: 70%;
     margin: auto;
 }
 
@@ -29,8 +29,7 @@ body {
 }
 
 .card-title {
-    margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 3vw;
 }
 
 .card-header {
@@ -48,15 +47,19 @@ a {
     color: red !important
 }
 
-@media (min-width: 800px) {
-    .wmin-md-400 {
-        min-width: 400px !important
+@media screen and (min-width: 1px) {
+    body {
+        font-size: 2vw;
     }
+}
+
+.responsive-button {
+    width: auto;
 }
 
 .btn-primary {
     color: #fff;
-    background-color: #1a7a52
+    background-color: #1a7a6a
 }
 
 .text-left {
@@ -81,7 +84,7 @@ a {
 
 .name {
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2vw;
     font-weight: 700;
     padding: 6px;
     border-radius: 5px;
@@ -89,14 +92,14 @@ a {
 }
 
 .description {
-    font-size: 18px; 
+    font-size: 2vw;
     font-weight: 500;
     margin-bottom: 3px;
     text-align: center;
 }
 
 .price   {
-    font-size: 18px; 
+    font-size: 2vw; 
     font-weight: 600;
     margin-bottom: 3px; 
     text-align: center;
