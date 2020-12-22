@@ -49,7 +49,7 @@ window.onload = function () {
             function removeProduct(e) {
                 e.preventDefault();
                  
-                const answer = confirm("are you sure you want to remove this item?") 
+                const answer = confirm("Are you sure you want to remove this item?") 
                   if(answer)  {
 
                     e.target.parentNode.remove();
