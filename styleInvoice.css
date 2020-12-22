@@ -5,12 +5,27 @@ body {
     background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Dancing Script', cursive;
+    color: #9CC2C2;
 }
 
-.justify-content-center {
-    max-width: 70%;
-    margin: auto;
+@media screen and (min-width:600px) {
+    .justify-content-center {
+        max-width: 70%;
+        margin: auto;
+    }
+    body {
+        font-size: 4vw;
+    }
 }
+
+@media screen and (min-width: 1px) {
+    body {
+        font-size: 5vw;
+    }
+}
+
+
 
 .margin-div-container {
     margin-bottom: 50px;
@@ -23,9 +38,13 @@ body {
     border-radius: .1rem
 }
 
+.distans {
+    width: 100%;
+}
+
 .card-body {
     padding: 1.25rem;
-    text-align: center
+    text-align: center;
 }
 
 .card-title {
@@ -40,17 +59,12 @@ body {
 }
 
 a {
-    text-decoration: none !important
+    text-decoration: none !important;
+    color: darkgrey;
 }
 
 .invoice-color {
-    color: red !important
-}
-
-@media screen and (min-width: 1px) {
-    body {
-        font-size: 2vw;
-    }
+    color: red;
 }
 
 .responsive-button {
@@ -58,8 +72,14 @@ a {
 }
 
 .btn-primary {
+    font-size: 3vw;
     color: #fff;
-    background-color: #1a7a6a
+    font-family: 'Dancing Script', cursive;
+    background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
+}
+
+.box {
+    text-align: center;
 }
 
 .text-left {
@@ -68,6 +88,10 @@ a {
 
 .text-right {
     text-align: right;
+}
+
+ul {
+    padding-inline-start: 4vw;
 }
 
 .list-unstyled {
@@ -87,7 +111,7 @@ a {
     font-size: 2vw;
     font-weight: 700;
     padding: 6px;
-    border-radius: 5px;
+    border-radius: 3px;
     text-align: center;
 }
 
@@ -98,9 +122,10 @@ a {
     text-align: center;
 }
 
-.price   {
+.price {
     font-size: 2vw; 
     font-weight: 600;
     margin-bottom: 3px; 
     text-align: center;
 }
+
