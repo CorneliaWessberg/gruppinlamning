@@ -5,12 +5,27 @@ body {
     background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Dancing Script', cursive;
+    color: #9CC2C2;
 }
 
-.justify-content-center {
-    max-width: 50%;
-    margin: auto;
+@media screen and (min-width:600px) {
+    .justify-content-center {
+        max-width: 70%;
+        margin: auto;
+    }
+    body {
+        font-size: 4vw;
+    }
 }
+
+@media screen and (min-width: 1px) {
+    body {
+        font-size: 5vw;
+    }
+}
+
+
 
 .margin-div-container {
     margin-bottom: 50px;
@@ -23,14 +38,17 @@ body {
     border-radius: .1rem
 }
 
+.distans {
+    width: 100%;
+}
+
 .card-body {
     padding: 1.25rem;
-    text-align: center
+    text-align: center;
 }
 
 .card-title {
-    margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 3vw;
 }
 
 .card-header {
@@ -41,22 +59,27 @@ body {
 }
 
 a {
-    text-decoration: none !important
+    text-decoration: none !important;
+    color: darkgrey;
 }
 
 .invoice-color {
-    color: red !important
+    color: red;
 }
 
-@media (min-width: 800px) {
-    .wmin-md-400 {
-        min-width: 400px !important
-    }
+.responsive-button {
+    width: auto;
 }
 
 .btn-primary {
+    font-size: 3vw;
     color: #fff;
-    background-color: #1a7a52
+    font-family: 'Dancing Script', cursive;
+    background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
+}
+
+.box {
+    text-align: center;
 }
 
 .text-left {
@@ -65,6 +88,10 @@ a {
 
 .text-right {
     text-align: right;
+}
+
+ul {
+    padding-inline-start: 4vw;
 }
 
 .list-unstyled {
@@ -81,23 +108,24 @@ a {
 
 .name {
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2vw;
     font-weight: 700;
     padding: 6px;
-    border-radius: 5px;
+    border-radius: 3px;
     text-align: center;
 }
 
 .description {
-    font-size: 18px; 
+    font-size: 2vw;
     font-weight: 500;
     margin-bottom: 3px;
     text-align: center;
 }
 
-.price   {
-    font-size: 18px; 
+.price {
+    font-size: 2vw; 
     font-weight: 600;
     margin-bottom: 3px; 
     text-align: center;
 }
+

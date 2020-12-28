@@ -37,6 +37,10 @@ body {
   padding: 3px;
   line-height: 3vw; }
 
+.nav2 {
+  margin-left: auto;
+}
+
 .item {
   margin-top: 0.5vw;
   margin-bottom: 0.5vw;
@@ -45,6 +49,11 @@ body {
   font-size: 1.5vw;
   font-weight: 600;
   color: #F0FFFF; }
+
+.con-log {
+  display: flex;
+  margin-left: auto;
+}
 
 #about {
   margin-left: 65vw; }

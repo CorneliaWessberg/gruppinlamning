@@ -8,31 +8,33 @@ window.onload = function () {
     // map loopar igenom arrayen products
     products.map((addedToCart) => {
         
-        // gör om price till en float istället för en sträng
-        const price = parseFloat(addedToCart.addedPrice);
-        // const quantity = document.querySelector(".quantity").value
-        // const quantityPrice = price * quantity;
-        // console.log(quantityPrice)
-        // räknar ut totalen, plussar på värdet för varje varv i loopen
-        totalPrice += price
-        console.log(totalPrice)
-        const totalNode = document.getElementById("total");
-        totalNode.innerHTML = `Total ${totalPrice}:-`
-    
+
     })
         
         
          products.map((addedToCart, index) => {
              const img = addedToCart.addedUrl;
              const name = addedToCart.addedName;
+             let quantity = addedToCart.addedQuantity
              //const description = addedToCart.addedDescription;
-             const price = addedToCart.addedPrice;
+             const price = parseFloat(addedToCart.addedPrice);
              const addProductBox = document.createElement("div");
              addProductBox.className = "box";
-         
              document.querySelector("#products").appendChild(addProductBox)
-              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="price"> price: ${price} kr </li> <li> <p class= "quantity"> Quantity: <input class="exemplar" > </p> </li> `
+              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> </li> <li class="name" > ${name} </li> <li class="price"> price: ${price} kr </li> <li> <p class= "quantity"> Quantity: <span id="quantity">${quantity}</span> </p> </li> `
               
+               // gör om price till en float istället för en sträng
+              
+              let qty = document.querySelector("#quantity").innerText
+              const quantityPrice = price * quantity;
+              console.log(qty)
+              // räknar ut totalen, plussar på värdet för varje varv i loopen
+              totalPrice += quantityPrice
+              //console.log(totalPrice)
+              const totalNode = document.getElementById("total");
+              totalNode.innerHTML = `Total ${totalPrice}:-`
+    
+
               const removeButton = document.createElement("button")
               removeButton.classList.add("delete-btn");                          
               removeButton.innerHTML = "&#x1F5D1; Remove";
