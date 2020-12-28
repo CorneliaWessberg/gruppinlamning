@@ -24,7 +24,20 @@ let products = JSON.parse(localStorage.getItem("products"))
              addProductBox.className = "box";
          
              document.querySelector("#products").appendChild(addProductBox)
-              addProductBox.innerHTML = `<li> <img class="imgStyle" src="${img}"> <li class="name" > ${name} </li></li>  <li class="description" > ${description} </li> <li class="price"> Price: ${price} kr </li> <li> <button class="cartBtn" id=` + id + `>   Add to cart  </button></li>`
+              addProductBox.innerHTML = `
+              <li>${id}</li>
+              <li> 
+                <img class="imgStyle" src="${img}"> 
+                <li class="name" >${name}</li>
+              </li>
+              <li class="description">${description}</li>
+              <li class="price"> Price: ${price} kr </li>
+              <li>
+                <input type="number" class="quantity" value="1">
+              </li>
+              <li>
+                <button class="cartBtn" id=${id}> Add to cart </button>
+              </li>`
               
              } )
          }
@@ -53,7 +66,8 @@ let products = JSON.parse(localStorage.getItem("products"))
     addedToCart.addedPrice = product.price
     addedToCart.addedDescription = btnAddToCart.parentNode.previousElementSibling.previousElementSibling.innerHTML;
     addedToCart.addedName = btnAddToCart.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
-    addedToCart.addedUrl = btnAddToCart.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.src; 
+    addedToCart.addedUrl = btnAddToCart.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.src
+    addedToCart.addedQuantity = btnAddToCart.parentNode.previousElementSibling.firstElementChild.value
     cartLista.push(addedToCart)
     
     // putting a new local storage and adding newly added products to the list of already added products to the shopping cart local storage
@@ -76,4 +90,3 @@ const btnCart = document.querySelector("#goToCart");
 btnCart.addEventListener("click", goToShoppingcart)
      
 
-     
