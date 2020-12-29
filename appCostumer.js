@@ -64,17 +64,18 @@ let products = JSON.parse(localStorage.getItem("products"))
         // creating another object where the products which the customer wants to buy are added and set to a different local storage
     let addedToCart = {};
     addedToCart.addedPrice = product.price
-    addedToCart.addedDescription = btnAddToCart.parentNode.previousElementSibling.previousElementSibling.innerHTML;
-    addedToCart.addedName = btnAddToCart.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+    addedToCart.addedDescription = btnAddToCart.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+    addedToCart.addedName = btnAddToCart.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
     addedToCart.addedUrl = btnAddToCart.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.src
     addedToCart.addedQuantity = btnAddToCart.parentNode.previousElementSibling.firstElementChild.value
     cartLista.push(addedToCart)
+    console.log(addedToCart)
     
     // putting a new local storage and adding newly added products to the list of already added products to the shopping cart local storage
     let existing = JSON.parse(localStorage.getItem("cartProducts"))
     let newData = existing ? existing.concat(cartLista) : cartLista
     localStorage.setItem("cartProducts", JSON.stringify(newData)); 
-    location.reload();
+    //location.reload();
     }
         btnAddToCart.addEventListener("click", addToShoppingcart);
     })      

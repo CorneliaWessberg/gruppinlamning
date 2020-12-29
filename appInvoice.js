@@ -60,7 +60,7 @@ window.onload = function () {
         
     }) */ 
     
-    // localStorage.removeItem("cartProducts")
+     localStorage.removeItem("cartProducts")
 }
 
 
