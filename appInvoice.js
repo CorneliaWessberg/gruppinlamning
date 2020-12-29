@@ -1,6 +1,6 @@
 window.onload = function () {
     let products = JSON.parse(localStorage.getItem("cartProducts"))
-        if (window.localStorage.length === 0) {   
+/*         if (window.localStorage.length === 0) {   
         }
         else {
             
@@ -14,15 +14,40 @@ window.onload = function () {
             addProductBox.className = "box";
             
             document.querySelector("#products").appendChild(addProductBox)
-            addProductBox.innerHTML = `<td> <img class="imgStyle" src="${img}"> </td> <td class="name" > ${name} </td> <td class="description" > ${description} </td> <td class="price"> Price: ${price} kr </td>`
-            
-
+            addProductBox.innerHTML = `<td> <img class="imgStyle" src="${img}"> </td> <td class="name" > ${name} </td> <td class="description" > ${description} </td> <td class="price"> ${description} </td>`
             } )
-        }
+        } */
 
     let totalPrice = 0;
 
-    // map loopar igenom arrayen products
+
+
+    products.map((addedToCart, index) => {
+        const img = addedToCart.addedUrl;
+        const name = addedToCart.addedName;
+        let quantity = addedToCart.addedQuantity
+        //const description = addedToCart.addedDescription;
+        const price = parseFloat(addedToCart.addedPrice);
+        const addProductBox = document.createElement("tr");
+        addProductBox.className = "box";
+        document.querySelector("#products").appendChild(addProductBox)
+         addProductBox.innerHTML = `<td> <img class="imgStyle" src="${img}"> </td> <td class="name" > ${name} </td> <td class="description"> <span id="quantity">quantity: ${quantity} </span> </td> <td class= "price">  ${price} kr </td> `
+         
+               // gör om price till en float istället för en sträng
+              
+               let qty = document.querySelector("#quantity").innerText
+               const quantityPrice = price * quantity;
+               console.log(qty)
+               // räknar ut totalen, plussar på värdet för varje varv i loopen
+               totalPrice += quantityPrice
+               //console.log(totalPrice)
+               const totalNode = document.getElementById("total");
+               totalNode.innerHTML = `Total ${totalPrice}:-`
+    })
+
+
+
+/*     // map loopar igenom arrayen products
     products.map((totalCost) => {
         // gör om price till en float istället för en sträng
         const price = parseFloat(totalCost.addedPrice);
@@ -33,10 +58,14 @@ window.onload = function () {
         const totalNode = document.getElementById("total");
         totalNode.innerHTML = `Total: ${totalPrice} kr` 
         
-    }) 
+    }) */ 
     
     // localStorage.removeItem("cartProducts")
 }
+
+
+
+
 
 
 /*creating a button*/
