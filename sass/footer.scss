@@ -11,7 +11,10 @@
     height: 30vw;
     font-family: 'Dancing Script', cursive;
     
-  
+    position: sticky;
+    height: 30vw;
+    top: calc( 100vh - 100px);
+
 }
 
 .style {

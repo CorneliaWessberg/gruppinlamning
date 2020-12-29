@@ -1,5 +1,4 @@
 body {
-    max-width: 100%;
     margin: auto;
     justify-content: center;
     background-image: linear-gradient(to right top, #ded9e4, #d6d9e7, #cddae7, #c4dce4, #bfdcdd);
@@ -9,18 +8,17 @@ body {
     color: #9CC2C2;
 }
 
+/* Gör sidan mer responsive */
 @media screen and (min-width:600px) {
-    .justify-content-center {
-        max-width: 70%;
-        margin: auto;
-    }
     body {
+        max-width: 70%;
         font-size: 4vw;
     }
 }
 
-@media screen and (min-width: 1px) {
+@media screen and (max-width: 599px) {
     body {
+        max-width: 90%;
         font-size: 5vw;
     }
 }
@@ -33,6 +31,7 @@ body {
 }
 
 .card {
+    width: 100%;
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .1rem
