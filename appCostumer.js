@@ -90,3 +90,5 @@ const btnCart = document.querySelector("#goToCart");
 btnCart.addEventListener("click", goToShoppingcart)
      
 
+
+     
