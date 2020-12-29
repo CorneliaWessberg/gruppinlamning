@@ -91,10 +91,25 @@ border-radius: 10px;
 }
 
 
+/*Responsive för flesta skärmar mellan 1024px - 320px */
+@media screen and (max-width: 1025px) {
+   .container {
+       max-width: 60%;
+   }
+}
 
 
 
+@media screen and (max-width: 415px) {
+    .container {
+        max-width: 90%;
+    }
+ 
+}
 
-
-
+@media screen and (max-width: 321px) {
+    .inputfields {
+        padding-left: 25px;
+    }
+}
 
