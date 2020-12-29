@@ -74,11 +74,11 @@ document.getElementById("download")
         /*Pointing to what in the html the pdf should be creating*/
         const invoice = document.getElementById("invoice");
         var opt = {
-            margin: 1,
+            margin: 0,
             filename: 'invoice.pdf',
             image: { type: 'jpeg', quality: 1 },
             html2canvas:  { scale: 2, useCORS: true },
-            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            jsPDF: { unit: 'in', format: 'a3', orientation: 'portrait' }
         };
         html2pdf().from(invoice).set(opt).save();
     });
