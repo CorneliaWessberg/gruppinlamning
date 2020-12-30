@@ -3,7 +3,7 @@ body {
     font-size: 2vw;
     background-color: #FAFCFC;
     max-width:100%;
-    font-family: 'Dancing Script', ;
+    font-family: 'Dancing Script',cursive ;
     height: 80vw;
 }
 
@@ -105,7 +105,7 @@ a:hover {
     border: beige;
     width: 20vw;
     border-radius: 20px;
-    font-family: 'Dancing script',;
+    font-family: 'Dancing script',cursive;
     font-size: 1.5vw;
     box-shadow: 2px 2px lightgray;
     cursor: pointer;
