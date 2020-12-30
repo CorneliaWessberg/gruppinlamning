@@ -123,10 +123,10 @@ const addProduct = function() {
             function editProduct(e) {
                 e.preventDefault();
                 const editButton = e.target;
-                const editedName = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktnamn:");
-                const editedDes = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktbeskrivning:");
-                const editedPrice = editButton.parentNode.previousElementSibling.previousElementSibling.innerText = prompt("Pris:");
-                const targetId = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+                const editedName = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktnamn:");
+                const editedDes = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Produktbeskrivning:");
+                const editedPrice = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerText = prompt("Pris:");
+                const targetId = editButton.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
 
                 //hämtar produkterna från localStorage
                 let exist = JSON.parse(localStorage.getItem("products"));
